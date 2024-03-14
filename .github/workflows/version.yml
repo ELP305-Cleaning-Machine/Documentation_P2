@@ -1,0 +1,32 @@
+name: Bump version
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: '0'
+
+    - name: Bump version and push tag
+      uses: anothrNick/github-tag-action@1.64.0 # Don't use @master or @v1 unless you're happy to test the latest version
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # if you don't want to set write permissions use a PAT token
+        WITH_V: true
+        DEFAULT_BUMP: patch
+        SOURCE: 'Tex_files'
+    - name: Add version to tex
+        run: |
+              git describe --tags --abbrev=0 > ./ver.tex
+     - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Updated `ver.tex` "
+          branch: main
+          commit_options: '--no-verify'
