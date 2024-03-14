@@ -22,8 +22,8 @@ jobs:
         DEFAULT_BUMP: patch
         SOURCE: 'Tex_files'
     - name: Add version to tex
-        run: |
-              git describe --tags --abbrev=0 > ./ver.tex
+        run:
+            git describe --tags --abbrev=0 > ./ver.tex
      - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
