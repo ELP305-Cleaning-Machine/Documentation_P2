@@ -21,12 +21,13 @@ jobs:
         WITH_V: true
         DEFAULT_BUMP: patch
         SOURCE: 'Tex_files'
+
     - name: Add version to tex
-        run:
-            git describe --tags --abbrev=0 > ./ver.tex
-     - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "Updated `ver.tex` "
-          branch: main
-          commit_options: '--no-verify'
+      run: |
+        git describe --tags --abbrev=0 > ./ver.tex
+    - name: Commit version
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Updated `ver.tex` "
+        branch: main
+        commit_options: '--no-verify'
