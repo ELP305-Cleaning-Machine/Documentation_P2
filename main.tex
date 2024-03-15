@@ -1,14 +1,38 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\documentclass[12pt,a4paper]{report}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%all_packages%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,portrait,margin=1in,headheight=15pt]{geometry}
+\usepackage{graphicx}
+\usepackage{appendix}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{titlesec}
+\usepackage{siunitx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Documentation_P2}
-\author{Navneet Raj}
-\date{March 2024}
+% to remove the chapter word in the pages
+\titleformat{\chapter}[display]
+{\normalfont\bfseries}{}{0pt}{\Huge}
+
+% Page style
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{\nouppercase{\leftmark}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Start of Document %%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-
-\maketitle
-
-\section{Introduction}
+\pagenumbering{roman}
+\tableofcontents
+\pagestyle{fancy}
+\chapter{Introduction}
 
 \end{document}
