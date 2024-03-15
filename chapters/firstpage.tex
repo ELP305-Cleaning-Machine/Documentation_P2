@@ -1,0 +1,89 @@
+
+\begin{titlepage}
+    
+    \newgeometry{hoffset=-1in, voffset=-1in, textwidth=160mm, textheight=253mm, topmargin=22mm, lmargin=2.2in, marginparpush=0mm,
+    footheight=0mm, footsep=0mm,
+    footskip=0mm}
+
+    % Logo right corner - change to black-white if needed
+       \begin{textblock*}{2mm}(16cm,4cm)
+       \includegraphics[width=50mm]{chapters/iitdlogo.png}
+       %\includegraphics[width=50mm]{def/TU_Logo_lang_RGB_schwarz.pdf}
+       \end{textblock*}
+         %%% gray background
+            \vskip2in
+            \begin{tikzpicture}[remember picture, overlay]         
+	        \fill [tuberlingrayarea, opacity=1] (-2,-8.0) rectangle (16,-28);
+	        \end{tikzpicture}
+	        \raggedright
+            \vskip3.5in
+             %%% title elements
+              {%
+				\fontsize{20}{28}
+				\boldmath
+				\sffamily
+				 Tribe: CleanTeX
+				\par
+            }
+             \vskip0.25in
+           
+             {
+				\Large
+				\fontsize{28}{32}
+				\bfseries
+				\boldmath
+				\sffamily
+                Bus Stand Display Unit
+				\par
+            }
+            \vskip0.15in
+             {
+				\fontsize{18}{18}
+				\sffamily
+                
+				\par
+            }
+            \vskip0.15in
+             {
+				\fontsize{16}{16}
+				\sffamily
+                ELP305 : Design and System Laboratory
+				\par
+            }
+            \vskip0.15in
+             {
+				\fontsize{16}{14}
+				\sffamily
+                Indian Institute of Technology, Delhi	
+                \par
+            }
+    \vspace{1.in}
+    {
+        \normalsize
+        %\fontsize{10}{12}
+        \sffamily
+        \textbf{Document Authorised by}\par \vspace{0.125cm}
+        {\href{https://www.linkedin.com/in/ayush-gupta-undergraduate/}{Ayush Gupta}, \href{www.linkedin.com}{Aryan}}
+
+        \vspace{0.25cm}
+        \textbf{Release Date}\par \vspace{0.125cm}
+        {\today}
+
+        \vspace{0.25cm}
+        \textbf{Release Version}\par \vspace{0.125cm}
+        \textbf{\input{ver}}
+
+        \vspace{0.25cm}
+        \textbf{Release Type}\par \vspace{0.125cm}
+        {Private Release}
+
+        \vspace{0.25cm}
+        \textbf{Terms Of Use}\par \vspace{0.125cm}
+        {All Rights Reserved}
+
+        \vspace{0.25cm}
+        \textbf{Project Details}\par \vspace{0.125cm}
+        {This project is being managed on \href{https://github.com/ELP305-Cleaning-Machine}{GitHub} and the latest version of this report is hosted \href{https://2nav.github.io/TribeC/}{here}.}
+    }
+\end{titlepage}
+\afterpage{\restoregeometry}    

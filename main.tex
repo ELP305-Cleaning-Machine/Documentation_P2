@@ -10,12 +10,35 @@
 \usepackage{subcaption}
 \usepackage{titlesec}
 \usepackage{siunitx}
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks,pdfa,pdfusetitle]{hyperref}
 \usepackage{float}
 \usepackage{fancyhdr}
 \usepackage{longtable}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%preamble and packages for first page%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvipsnames, svgnames]{xcolor}
+\usepackage{tikz}
+\usepackage{xspace}
+\usepackage{pdfpages}
+\usepackage{afterpage}
+\usepackage{graphicx}
+\usepackage{hyperxmp}
+\usepackage{url}
+\urlstyle{sf}
+\usepackage{ccicons} % use Creative Commons icons
+\usepackage[absolute]{textpos} % exact position logo
+\usepackage{amsmath} % https://ctan.org/pkg/amsmath for mathematical features
+
+%% Fonts and typography
+%\usepackage{helvet}           
+\usepackage[scaled=0.95]{helvet} % Helvetica (kerning adjusted)
+\renewcommand{\sfdefault}{phv}     % Helvetica
+\usepackage[final]{microtype}  % Improved typography
+
+\definecolor{tuberlingrayarea}{RGB}{249 247 247} % TU gray #F9F7F7 for background
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % to remove the chapter word in the pages
 \titleformat{\chapter}[display]
@@ -30,6 +53,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%% Start of Document %%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+\input{chapters/firstpage}
 \pagenumbering{roman}
 \tableofcontents
 \pagestyle{fancy}
