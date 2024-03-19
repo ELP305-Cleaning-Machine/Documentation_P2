@@ -14,6 +14,8 @@
 \usepackage{float}
 \usepackage{fancyhdr}
 \usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{ulem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%preamble and packages for first page%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -58,5 +60,10 @@
 \tableofcontents
 \pagestyle{fancy}
 \chapter{Introduction}
-
+\pagebreak
+\chapter{Requirements}
+\input{Files/Chapters/Requirements/Operational}
+\input{Files/Chapters/Requirements/InterfaceAndCommunication}
+\input{Files/Chapters/Requirements/Logistical}
+\input{Files/Chapters/Requirements/Maintenance}
 \end{document}
