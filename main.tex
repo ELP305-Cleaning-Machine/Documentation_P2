@@ -1,7 +1,9 @@
+% !TEX --enable-write18
 \documentclass[12pt,a4paper]{report}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%all_packages%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[T1]{fontenc}
+\usepackage{lmodern} % needed on MikTeX
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper,portrait,margin=1in,headheight=15pt]{geometry}
 \usepackage{graphicx}
@@ -16,6 +18,7 @@
 \usepackage{longtable}
 \usepackage{enumitem}
 \usepackage{ulem}
+\usepackage[abspage,user,lastpage]{zref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%preamble and packages for first page%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,4 +69,10 @@
 \input{Files/Chapters/Requirements/InterfaceAndCommunication}
 \input{Files/Chapters/Requirements/Logistical}
 \input{Files/Chapters/Requirements/Maintenance}
+%%%%%% Appendices %%%%
+\chapter[Document Statistics]{A. Document Statistics}
+\input{Files/Chapters/Appendices/Document_Statistics}
+\chapter[Readability Index]{B. Readability Index}
+\input{Files/Chapters/Appendices/Readability_Indices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
