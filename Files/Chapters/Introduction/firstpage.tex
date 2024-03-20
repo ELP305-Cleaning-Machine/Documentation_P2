@@ -1,4 +1,4 @@
-
+\renewcommand{\thefootnote}{\alph{footnote}}
 \begin{titlepage}
     \newgeometry{voffset=-1in,textwidth=160mm, textheight=253mm,margin=1in}
    % \newgeometry{hoffset=-1in, voffset=-1in, textwidth=160mm, textheight=253mm, topmargin=22mm, headsep=0mm, headheight=0mm, lmargin=2.2in, marginparpush=0mm,footheight=0mm, footsep=0mm}
@@ -69,7 +69,10 @@
 
         \vspace{0.25cm}
         \textbf{\textcolor{tuberlindarkgray}{Release Version}}\par \vspace{0.125cm}
-        \textbf{\input{ver}}
+        \textbf{\input{ver}}\footnote{Tracked automatically in the \textbf{GitHub} Repository.
+                  \textbf{v0.0.1} was the first release after P2 release on March 13, 2024.
+                  Version number is stepped up, based on whether it is a \textbf{Minor Release} or a \textbf{Bug Fix}.
+                  The file after submission at the end of each week is considered a \textbf{Major Release}.}
 
         \vspace{0.25cm}
         \textbf{\textcolor{tuberlindarkgray}{Release Type}}\par \vspace{0.125cm}
