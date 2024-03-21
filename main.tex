@@ -5,6 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern} % needed on MikTeX
 \usepackage[utf8]{inputenc}
+\usepackage{imakeidx}
 \usepackage[a4paper,portrait,margin=1in,headheight=15pt]{geometry}
 \usepackage{graphicx}
 \usepackage{appendix}
@@ -35,6 +36,7 @@
 \usepackage{ccicons} % use Creative Commons icons
 \usepackage[absolute]{textpos} % exact position logo
 \usepackage{amsmath} % https://ctan.org/pkg/amsmath for mathematical features
+\makeindex[columns = 2, title = Alphabetical Index, intoc, options =-s indcomma]
 
 %% Fonts and typography
 %\usepackage{helvet}           
@@ -58,7 +60,7 @@
 
 %footnote style
 \setlength\footnotemargin{10pt}
-
+\makenoidxglossaries
 %%%%%%%%%%%%%%%%%%%%%%%% Start of Document %%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -78,12 +80,14 @@
 \input{Files/Chapters/Requirements/Logistical}
 \input{Files/Chapters/Requirements/Maintenance}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printnoidxglossaries
 %%%%%% Appendices %%%%
 \chapter[Document Statistics]{A. Document Statistics}
 \input{Files/Chapters/Appendices/Document_Statistics}
 \chapter[Readability Index]{B. Readability Index}
 \input{Files/Chapters/Appendices/Readability_Indices}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printindex
 \end{document}
