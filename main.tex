@@ -70,7 +70,18 @@
 \tableofcontents
 \pagestyle{fancy}
 \chapter{Introduction}
+
 \input{Files/Chapters/Introduction/Members}
+
+
+\listoftables
+\addcontentsline{toc}{section}{List of Tables}
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+
+\input{Files/Chapters/Introduction/Motivation}
+
+\input{Files/Chapters/Introduction/Abstract}
 
 \pagebreak
 
@@ -78,10 +89,11 @@
 \pagenumbering{arabic}
 
 \chapter{Requirements}
-
-\input{Files/Chapters/Requirements/Operational}
-\input{Files/Chapters/Requirements/Interface}
+\input{Files/Chapters/Requirements/Functional}
 \input{Files/Chapters/Requirements/Logistical}
+\input{Files/Chapters/Requirements/Interface}
+\input{Files/Chapters/Requirements/Readability}
+\input{Files/Chapters/Requirements/Power}
 \input{Files/Chapters/Requirements/Maintenance}
 
 

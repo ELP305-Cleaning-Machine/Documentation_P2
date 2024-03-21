@@ -1,21 +1,32 @@
 \section{Interface and Communication Requirements}
 
 \begin{enumerate}
-    \item \index{Driver}\underline{\textsc{Driver Notification for Passenger Wait Time}} : There's no obligation to inform the driver if a passenger waits for more than a minute. Waiting time is restricted to passenger boarding and deboarding.
-    
-    \item \underline{\textsc{Bus Full Indicator for Passengers}} : The driver is not obligated to provide information to waiting passengers regarding the availability of space.
-    
-    \item \underline{\textsc{Feedback and Issue Reporting Mechanism}} : A digital interface could be implemented for users to provide feedback or report issues related to bus services.
-    
-    \item \underline{\textsc{Wait Time Interface}} : An interface can be devised to allow individuals heading to the bus stop to access information regarding the wait time.
-    
-    \item \underline{\textsc{Timeline for System Development}} : The desired timeline for the development, testing, and deployment of the system is April 25th, 2025.
-    
-    \item \underline{\textsc{Bus Location Information Exchange}} : There's no need for each bus to be informed about the location of other buses.
-    
-    \item \underline{\textsc{Campus Bus Service Accessibility}} : Prioritizing full accessibility for all campus residents on the bus service is not necessary.
-    
-    \item \underline{\textsc{Connectivity Focus}} : Connectivity is exclusively between buses and stops, with no direct communication link to passengers.
-    
-    \item \underline{\textsc{Displaying Bus Capacity Information}} : It is unnecessary to display a bus's full status at upcoming stops, as passengers may alight at any point, which remains unpredictable to the driver.
+    \item \index{Display Method}\underline{\textsc{Display Method}} : Use of an \index{LED dot matrix display}LED dot matrix display.
+
+    \item \underline{\textsc{Accuracy}} :The reading on the display must be accurate to ±1 minute.
+
+    \item \underline{\textsc{Duration Of Activity}} : Must remain active only between 0700 to 1930 hours, powering on/off should be automated.
+
+    \item \index{Display Mounting}\underline{\textsc{Display Mounting}} : Secure mounting to prevent theft. Mechanical fixation at unreachable height.
+
+    \item \underline{\textsc{Accessibility for Visually Impaired}} :  Utilize PWM output or speech IC for accessibility.
+
+    \item \index{Syncing Capacity}\underline{\textsc{Syncing Capacity}} : Not necessary for synchronization.
+
+    \item \index{Budget Constraints}\underline{\textsc{Budget Constraints}} : To be Made as cost-efficient as possible.
+
+    \item \index{Passenger Input}\underline{\textsc{Passenger Input}} : Prefer sensor-based input.
+
+    \item \underline{\textsc{Audio Announcement}} : Consider installing an audio unit.
+
+    \item \index{BUk Functionality}\underline{\textsc{BUk Functionality}} : No display on BUk, includes some visual confirmation LEDs.
+
+    \item \underline{\textsc{Passenger Waiting Notification}} : Separate indicator integrated into BUk.
+
+    \item \index{Error Indicator}\underline{\textsc{Error Indicator}} : The Display would read ‘999’ to indicate emergency or unforeseen delays
+
+    \item \underline{\textsc{Feedback System}} : Are there any means for taking feedback from the users or for reporting issues related to bus services?
+
+    \item \underline{\textsc{Resilient}} : Display is exposed to all Delhi weather conditions.
+   
 \end{enumerate}
