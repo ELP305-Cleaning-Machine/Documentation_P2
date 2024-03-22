@@ -3,12 +3,12 @@
 
 \begin{itemize}
 
-\item Maintain the \textbf{Arrival}\textsubscript{mxn} matrix : Element (i, j) stores the arrival time of j\textsuperscript{th} bus at the i\textsuperscript{th} stop.
-\item Maintain the \textbf{Departure}\textsubscript{mxn} matrix : Element (i, j) stores the departure time of j\textsuperscript{th} bus at the i\textsuperscript{th} stop.
-\item Maintain the \textbf{PassengerWaitingAtStop}\textsubscript{1xm} matrix : Element (0, j) is $x$ where
+\item Maintain the \textbf{Arrival}\textsubscript{mxn} matrix : Element $(i, j)$ stores the arrival time of $j$\textsuperscript{th} bus at the $i$\textsuperscript{th} stop.
+\item Maintain the \textbf{Departure}\textsubscript{mxn} matrix : Element $(i, j)$ stores the departure time of $j$\textsuperscript{th} bus at the $i$\textsuperscript{th} stop.
+\item Maintain the \textbf{PassengerWaitingAtStop}\textsubscript{1xm} matrix : Element $(0, j)$ is $x$ where
  \[ x = \begin{cases} \mbox{1} & \mbox{if any passenger is waiting at the j\textsuperscript{th} stop}  \\ \mbox{0} & \mbox{otherwise} \end{cases} \]
 \item Maintain the \textbf{Direction}\textsubscript{1xn} matrix : Element (0, j) is x where
- \[ x = \begin{cases} \mbox{0} & \mbox{if j\textsuperscript{th} bus is moving towards 0\textsuperscript{th} stop}  \\ \mbox{1} & \mbox{if j\textsuperscript{th} bus is moving towards m-1\textsuperscript{th} stop} \end{cases} \]
+ \[ x = \begin{cases} \mbox{0} & \mbox{if $j$\textsuperscript{th} bus is moving towards $0$\textsuperscript{th} stop}  \\ \mbox{1} & \mbox{if $j$\textsuperscript{th} bus is moving towards $m-1$\textsuperscript{th} stop} \end{cases} \]
 
 
 \end{itemize}
