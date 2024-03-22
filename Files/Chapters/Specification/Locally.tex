@@ -5,7 +5,7 @@
 \item Maintain the \textbf{Scheduled}\textsubscript{mxn} matrix: Element (i, j) stores the scheduled time of the j\textsuperscript{th} bus at the i\textsuperscript{th} stop.
 \item Maintain the \textbf{Estimated}\textsubscript{mxn} matrix: Element (i, j) stores the estimated time of the j\textsuperscript{th} bus at the i\textsuperscript{th} stop.
 \item These matrices can be stored for estimation of arrival times, the passenger waiting functionality.
-\item When j\textsuperscript{th} bus arrives at the i\textsuperscript{th} stop: (i, j)\textsuperscript{th} element of the \textbf{Arrival} matrix is updated. Bus stop 'i' acts as the server, and all other bus stops act as clients.
+\item When j\textsuperscript{th} bus arrives at the i\textsuperscript{th} stop: (i, j)\textsuperscript{th} element of the \textbf{Arrival} matrix is updated. Bus stop `i' acts as the server, and all other bus stops act as clients.
 \item When j\textsuperscript{th} bus departs the i\textsuperscript{th} stop: (i, j)\textsuperscript{th} element is updated. All arrival times of j\textsuperscript{th} column are updated to new estimate times based on \textit{average} time between stops and departure time from i\textsuperscript{th} stop.
 \item For sensing whether the bus has stopped or not, we are using \textit{Accelerometer} reading.
 \item \textbf{Bus stop nodes that can access this matrix} (i.e. nodes that are connected to the network):\\
