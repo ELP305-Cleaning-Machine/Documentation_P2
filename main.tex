@@ -146,16 +146,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \printnoidxglossaries
 %%%%%% Appendices %%%%
-\addcontentsline{toc}{section}{Background Research}
-\printbibliography[env=nolabelbib, keyword={no_cite}, title={Background Research}]
 
+\chapter{References}
+
+\addcontentsline{toc}{section}{Background Research}
+
+\vbox{
+  \printbibliography[env=nolabelbib, keyword={no_cite}, title={Background Research}]
+}
+\printbibliography[env=nolabelbib, keyword={software}, title={Softwares Used}]
 \addcontentsline{toc}{section}{Software Used}
-\printbibliography[env=nolabelbib, keyword={software}, title={Software Used}]
+
 
 \chapter[Document Statistics]{A. Document Statistics}
 \input{Files/Chapters/Appendices/Document_Statistics}
 \chapter[Readability Index]{B. Readability Index}
 \input{Files/Chapters/Appendices/Readability_Indices}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \printindex
 \end{document}
