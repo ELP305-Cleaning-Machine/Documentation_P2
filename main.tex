@@ -95,6 +95,40 @@
 \newcolumntype{n}{>{\centering} m{5.5cm}}
 \newcolumntype{e}{>{\raggedleft} m{3.1cm}}
 \newcolumntype{E}{>{\raggedleft} m{5.1cm}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             Landscape Environment                         %%%
+%%%        (Must load etoolbox package before)                %%%
+%%%    And use /savegeometry before the using landscape page  %%%
+%%%      and use /loadgeometry after the landscape page       %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+ \def\ifGm@preamble#1{\@firstofone}
+  \appto\restoregeometry{%
+     \pdfpagewidth=\paperwidth
+     \pdfpageheight=\paperheight}
+ \apptocmd\newgeometry{%
+    \pdfpagewidth=\paperwidth
+    \pdfpageheight=\paperheight}{}{}
+ \makeatother
+
+
+\newenvironment{landscapes}{
+    \newpage
+    \newgeometry{margin=1in,landscape}  
+}{%
+\newpage
+}
+
+\fancypagestyle{uselscape}{
+	\fancyhf{}
+	\fancyhead[R]{\thepage}
+	\fancyhead[L]{\nouppercase{\rightmark}}
+	\fancyheadoffset[R]{0mm}
+	}
+
 %%%%%%%%%%%%%%%%%%%%%%%% Start of Document %%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -112,18 +146,16 @@
 \listoffigures
 \addcontentsline{toc}{section}{List of Figures}
 
-\pagebreak
 
-\loadgeometry{before_landscape}
-\input{Files/Chapters/PM}
-\pagebreak
+\input{Files/Chapters/Introduction/PM}
 
-\input{Files/Chapters/Resources}
+\input{Files/Chapters/Introduction/Resources}
+
+\pagenumbering{arabic}
 
 \input{Files/Chapters/Introduction/Abstract}
 \addcontentsline{toc}{section}{Abstract}
 
-\pagenumbering{arabic}
 \input{Files/Chapters/Introduction/Motivation}
 
 
@@ -161,7 +193,7 @@
   \printbibliography[env=nolabelbib, keyword={no_cite}, title={Background Research}]
 }
 \printbibliography[env=nolabelbib, keyword={software}, title={Softwares Used}]
-\addcontentsline{toc}{section}{Software Used}
+\addcontentsline{toc}{section}{Softwares Used}
 
 
 \chapter[Document Statistics]{A. Document Statistics}
