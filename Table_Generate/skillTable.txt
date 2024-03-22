@@ -1,0 +1,114 @@
+Navneet Raj & Documentation & Overleaf, LaTeX, GitHub Actions, pandoc\\ 
+\hline 
+Sanjay Pooniya & Documentation & Latex\\ 
+\hline 
+Ayush Gupta & Documentation & Research\\ 
+\hline 
+Rishabh Barola & Documentation & RF communication, System design\\ 
+\hline 
+Asmit Singh & Documentation & Documentation\\ 
+\hline 
+Vasu Sharma & Documentation & LaTeX, GitHub, Obsidian/Mermaid, MSWord\\ 
+\hline 
+Harsh Agarwal & Others & Research\\ 
+\hline 
+Abhinav Verma & Others & Research\\ 
+\hline 
+Khushika Shringi & Others & Research\\ 
+\hline 
+Yash Goel & Others & Research\\ 
+\hline 
+Aryan Gupta & Others & Research\\ 
+\hline 
+Aniket Singh & Others & Research based work on how to transfer data with minimum internet usage\\ 
+\hline 
+2021ee10653 & Others & Research\\ 
+\hline 
+Mridul Ahi & Others & Research\\ 
+\hline 
+Eepsita & Others & Research\\ 
+\hline 
+Pooja Mahajan & Others & Research\\ 
+\hline 
+Chetan Chaurasia & Others & Research\\ 
+\hline 
+Vikas Meena & Others & Research\\ 
+\hline 
+Anshul & Others & Research\\ 
+\hline 
+Ark Verma & Others & RF communication, GPS modules, Telemetry, Research\\ 
+\hline 
+Yash Agarwal & Others & Research\\ 
+\hline 
+Sheetal Manatawal & Others & Research\\ 
+\hline 
+Disha Katia & Others & Research\\ 
+\hline 
+Chirag Gautam & Others & Research\\ 
+\hline 
+Shubham Aggarwal & Others & Research, Problem Solving\\ 
+\hline 
+Mohit Raj & Others & Research\\ 
+\hline 
+Ujjwal Yadav & Others & 7 segment display\\ 
+\hline 
+Aniket Abhiraj & Others & LCD design, Arduino, triger identifier for bus, hardware design.\\ 
+\hline 
+Sarthak Kumar Singh & Others & Research on occupancy estimation\\ 
+\hline 
+Aditi Shekhar & Others & Research\\ 
+\hline 
+Anchal & Others & Research, Browsing, Brainstorming\\ 
+\hline 
+Rohan Das & Others & Research\\ 
+\hline 
+Rohan Das & Others & Research\\ 
+\hline 
+Harsh Swaika & Others & Research\\ 
+\hline 
+Aditya Jain & Others & Research\\ 
+\hline 
+Harshit Sachdeva & Others & Research\\ 
+\hline 
+Kinjal Anchhara & Others & Research\\ 
+\hline 
+Dhruv Kushwaha & Others & Research, Survey\\ 
+\hline 
+Shubh Chhabra & Others & Research\\ 
+\hline 
+Pramukh Jain & Others & Hardware selection\\ 
+\hline 
+Oshin Kavdia & Others & Research\\ 
+\hline 
+Kalu Ram Tard & Others & Research\\ 
+\hline 
+Joel Arun Kumar Yenubotula & Others & ESP32, networks\\ 
+\hline 
+Ameya Mishra & Others & Research\\ 
+\hline 
+Tanmai Merugu & Others & Research\\ 
+\hline 
+Khushvind Maurya & Others & Research\\ 
+\hline 
+Vinay Sah & Others & Research\\ 
+\hline 
+Shivam Kumar & Others & Research\\ 
+\hline 
+Deepanshu Kumar & Others & Research\\ 
+\hline 
+Durgesh Nandini & Others & Research on LoRa wireless comminication\\ 
+\hline 
+Kaustubh Dev & Others & Research, transmission techniques, Receiver hardware\\ 
+\hline 
+Arnav Goel & Others & Research\\ 
+\hline 
+Ayush Kumar & Others & Research\\ 
+\hline 
+Bingi Sai Vishal & Others & Analysis and Design of Algorithms, python\\ 
+\hline 
+Abhilasa Das & Others & Research\\ 
+\hline 
+Ravi Parihar & Others & Research\\ 
+\hline 
+Himanshu Prajapati & Others & GitHub, Research on YT\\ 
+\hline 
