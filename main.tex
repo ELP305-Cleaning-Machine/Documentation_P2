@@ -6,7 +6,7 @@
 \usepackage{lmodern} % needed on MikTeX
 \usepackage[utf8]{inputenc}
 \usepackage{imakeidx}
-\usepackage{glossaries}
+\usepackage[toc]{glossaries}
 \usepackage[a4paper,portrait,margin=1in,headheight=15pt]{geometry}
 \usepackage{graphicx}
 \usepackage{appendix}
@@ -31,6 +31,8 @@
 \usepackage{listings}
 \usepackage[abspage,user,lastpage]{zref}
 \usepackage[hang]{footmisc}       %for aligning footnote
+\usepackage{biblatex}
+\makeindex[columns = 2, title = Alphabetical Index, intoc, options =-s indcomma]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%preamble and packages for first page%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,6 +64,22 @@
 \titleformat{\chapter}[display]
 {\normalfont\bfseries}{}{0pt}{\Huge}
 
+% The following definition is copied from authortitle.bbx/authoryear.bbx
+\defbibenvironment{nolabelbib}
+  {\list
+     {}
+     {\setlength{\leftmargin}{\bibhang}%
+      \setlength{\itemindent}{-\leftmargin}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}}
+  {\endlist}
+  {\item}
+
+
+% adding bibliography sources
+\addbibresource{Files/Chapters/Appendices/references.bib}
+\nocite{*}
+
 % Page style
 \pagestyle{fancy}
 \fancyhf{}
@@ -71,6 +89,7 @@
 %footnote style
 \setlength\footnotemargin{10pt}
 \makenoidxglossaries
+\input{Files/Chapters/Introduction/Glossary}
 
 %defining new alignment
 \newcolumntype{n}{>{\centering} m{5.5cm}}
@@ -127,6 +146,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \printnoidxglossaries
 %%%%%% Appendices %%%%
+\addcontentsline{toc}{section}{Background Research}
+\printbibliography[env=nolabelbib, keyword={no_cite}, title={Background Research}]
+
+\addcontentsline{toc}{section}{Software Used}
+\printbibliography[env=nolabelbib, keyword={software}, title={Software Used}]
+
 \chapter[Document Statistics]{A. Document Statistics}
 \input{Files/Chapters/Appendices/Document_Statistics}
 \chapter[Readability Index]{B. Readability Index}
