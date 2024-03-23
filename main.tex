@@ -31,8 +31,8 @@
 \usepackage{listings}
 \usepackage[abspage,user,lastpage]{zref}
 \usepackage[hang]{footmisc}       %for aligning footnote
-\usepackage{biblatex}
-\makeindex[columns = 2, title = Alphabetical Index, intoc, options =-s indcomma]
+\usepackage[backend=biber,refsection=section,sorting=none,style=numeric, defernumbers=true,safeinputenc]{biblatex}
+\makeindex[columns = 2, title = AlphabeticalIndex, intoc, options =-s indcomma]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%preamble and packages for first page%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -139,6 +139,7 @@
 \chapter{Introduction}
 
 \input{Files/Chapters/Introduction/Members}
+{\tiny \textcolor{white}{\ac{IF}}}
 
 
 \listoftables
@@ -147,6 +148,12 @@
 \addcontentsline{toc}{section}{List of Figures}
 
 \newpage
+\section{Acronyms}
+%adding the acromyns
+\input{Files/Chapters/Introduction/acronym.tex}
+
+\newpage
+
 \input{Files/Chapters/Introduction/MindMaps}
 \newpage
 
@@ -188,9 +195,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \printnoidxglossaries
 %%%%%% Appendices %%%%
-
-\chapter{References}
-
+\newpage
 \addcontentsline{toc}{section}{Background Research}
 
 \vbox{
