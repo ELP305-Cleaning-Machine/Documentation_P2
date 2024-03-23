@@ -1,0 +1,114 @@
+Navneet Raj & 2021MT10240 & Documentation & 10.0\\ 
+\hline 
+Sanjay Pooniya & 2021EE10148 & Documentation & 3.0\\ 
+\hline 
+Ayush Gupta & 2021MT10697 & Documentation & 4.0\\ 
+\hline 
+Rishabh Barola & 2021EE10636 & Documentation & 5.0\\ 
+\hline 
+Asmit Singh & 2021MT10887 & Documentation & 5.0\\ 
+\hline 
+Vasu Sharma & 2021EE10620 & Documentation & 9.0\\ 
+\hline 
+Harsh Agarwal & 2021EE30977 & Others & 4.0\\ 
+\hline 
+Abhinav Verma & 2021EE10978 & Others & 10.0\\ 
+\hline 
+Khushika Shringi & 2021EE10665 & Others & 10.0\\ 
+\hline 
+Yash Goel & 2021EE10984 & Others & 9.0\\ 
+\hline 
+Aryan Gupta & 2021EE10974 & Others & 9.0\\ 
+\hline 
+Aniket Singh & 2021MT10256 & Others & 3.0\\ 
+\hline 
+2021ee10653 & 2021EE10653 & Others & 5.0\\ 
+\hline 
+Mridul Ahi & 2021MT10901 & Others & 1.0\\ 
+\hline 
+Eepsita & 2021EE10692 & Others & 7.0\\ 
+\hline 
+Pooja Mahajan & 2021EE10652 & Others & 9.0\\ 
+\hline 
+Chetan Chaurasia & 2021EE10147 & Others & 6.0\\ 
+\hline 
+Vikas Meena & 2021EE10169 & Others & 4.0\\ 
+\hline 
+Anshul & 2021EE10729 & Others & 5.0\\ 
+\hline 
+Ark Verma & 2021EE10783 & Others & 10.0\\ 
+\hline 
+Yash Agarwal & 2021EE10638 & Others & 8.0\\ 
+\hline 
+Sheetal Manatawal & 2021EE10174 & Others & 5.0\\ 
+\hline 
+Disha Katia & 2021EE10647 & Others & 6.5\\ 
+\hline 
+Chirag Gautam & 2021EE10166 & Others & 4.0\\ 
+\hline 
+Shubham Aggarwal & 2021EE10809 & Others & 8.0\\ 
+\hline 
+Mohit Raj & 2021MT10919 & Others & 5.0\\ 
+\hline 
+Ujjwal Yadav & 2021EE10669 & Others & 8.0\\ 
+\hline 
+Aniket Abhiraj & 2021EE10676 & Others & 9.0\\ 
+\hline 
+Sarthak Kumar Singh & 2021EE10673 & Others & 8.0\\ 
+\hline 
+Aditi Shekhar & 2021EE10685 & Others & 6.0\\ 
+\hline 
+Anchal & 2021MT10910 & Others & 8.0\\ 
+\hline 
+Rohan Das & 2021EE10621 & Others & 7.0\\ 
+\hline 
+Rohan Das & 2021EE10621 & Others & 7.0\\ 
+\hline 
+Harsh Swaika & 2021EE11052 & Others & 4.0\\ 
+\hline 
+Aditya Jain & 2021EE10633 & Others & 7.0\\ 
+\hline 
+Harshit Sachdeva & 2021EE30705 & Others & 7.0\\ 
+\hline 
+Kinjal Anchhara & 2021MT60959 & Others & 8.0\\ 
+\hline 
+Dhruv Kushwaha & 2021MT10235 & Others & 6.0\\ 
+\hline 
+Shubh Chhabra & 2021EE10645 & Others & 8.0\\ 
+\hline 
+Pramukh Jain & 2021EE10720 & Others & 6.0\\ 
+\hline 
+Oshin Kavdia & 2021EE10654 & Others & 4.0\\ 
+\hline 
+Kalu Ram Tard & 2021EE10680 & Others & 8.0\\ 
+\hline 
+Joel Arun Kumar Yenubotula & 2021EE10159 & Others & 5.0\\ 
+\hline 
+Ameya Mishra & 2021MT10637 & Others & 9.0\\ 
+\hline 
+Tanmai Merugu & 2021EE10149 & Others & 8.0\\ 
+\hline 
+Khushvind Maurya & 2021MT10238 & Others & 3.5\\ 
+\hline 
+Vinay Sah & 2021EE10171 & Others & 3.0\\ 
+\hline 
+Shivam Kumar & 2021EE10165 & Others & 4.0\\ 
+\hline 
+Deepanshu Kumar & 2021EE10696 & Others & 4.0\\ 
+\hline 
+Durgesh Nandini & 2021EE10651 & Others & 8.0\\ 
+\hline 
+Kaustubh Dev & 2021EE10689 & Others & 8.0\\ 
+\hline 
+Arnav Goel & 2021EE10699 & Others & 7.0\\ 
+\hline 
+Ayush Kumar & 2021EE10150 & Others & 5.0\\ 
+\hline 
+Bingi Sai Vishal & 2021EE10668 & Others & 6.0\\ 
+\hline 
+Abhilasa Das & 2021EE10168 & Others & 8.0\\ 
+\hline 
+Ravi Parihar & 2021EE10156 & Others & 4.0\\ 
+\hline 
+Himanshu Prajapati & 2021EE30177 & Others & 4.0\\ 
+\hline 

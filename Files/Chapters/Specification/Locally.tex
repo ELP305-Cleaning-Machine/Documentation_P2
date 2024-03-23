@@ -1,33 +1,38 @@
 \subsubsection{Locally}
 
-\begin{itemize}
+\begin{enumerate}
 
 \item Maintain the \textbf{Scheduled}\textsubscript{mxn} matrix: Element $(i, j)$ stores the scheduled time of the $j$\textsuperscript{th} bus at the $i$\textsuperscript{th} stop.
 \item Maintain the \textbf{Estimated}\textsubscript{mxn} matrix: Element $(i, j)$ stores the estimated time of the $j$\textsuperscript{th} bus at the $i$\textsuperscript{th} stop.
 \item These matrices can be stored for estimation of arrival times, the passenger waiting functionality.
 \item When $j$\textsuperscript{th} bus arrives at the $i$\textsuperscript{th} stop: $(i, j)$\textsuperscript{th} element of the \textbf{Arrival} matrix is updated. Bus stop `i' acts as the server, and all other bus stops act as clients.
-\item When j\textsuperscript{th} bus departs the i\textsuperscript{th} stop: $(i, j)$\textsuperscript{th} element is updated. All arrival times of $j$\textsuperscript{th} column are updated to new estimate times based on \textit{average} time between stops and departure time from $i$\textsuperscript{th} stop.
+\item When j\textsuperscript{th} bus departs the i\textsuperscript{th} stop: $(i, j)$\textsuperscript{th} element of the \textbf{Departure} matrix is updated. All arrival times of $j$\textsuperscript{th} column are updated to new estimate times based on \textit{average} time between stops and departure time from $i$\textsuperscript{th} stop.
 \item For sensing whether the bus has stopped or not, we are using \textit{Accelerometer} reading.
-\item \textbf{Bus stop nodes that can access this matrix} (i.e. nodes that are connected to the network):\\
-\null \qquad Arrival time of next bus at $i$\textsuperscript{th} stop= min\{$i$\textsuperscript{th} row\}\\
-\null \qquad Suppose that $j$ the next bus arriving at $i$\textsuperscript{th} stop $= j$.\\
-\null \qquad Direction of next bus $= j$\textsuperscript{th} element of \textbf{Direction} matrix.\\
-\null \qquad Both Arrival time and Direction of buses needs to be communicated to the commuters.
-
-\item \textbf{Bus stop nodes that cannot access this matrix} (i.e. nodes that unexpectedly get disconnected):\\
-\null \qquad Arrival times of each bus estimated using scheduled time and last known whereabouts of buses:\\
-\null \qquad \qquad Estimated time = Scheduled time + (last known deviation from scheduled\\
-\null \qquad \qquad time)\\
-\null \qquad If estimated time shows a large deviation from scheduled time, we will use scheduled time instead of estimated time.\\
-\null \qquad Direction matrix can be updated based on these estimates: Direction of $j$\textsuperscript{th} bus switches when arrival time of stop $m-1$ is crossed.\\
-\null \qquad Similar to the previous case, both Arrival time and Direction of buses needs to be communicated to the commuters.
-
-\item \textbf{When the bus reaches stop $0$ after a round trip}:\\
-\null \qquad The \textbf{Arrival} and \textbf{Departure} matrices are updated to actual/estimated arrival and departure values, and this can be used to keep log of actual arrival and departure times in the system.\\
-\null \qquad Moving average of previous runs can be used to refine predictions.\\
-\null \qquad After uploading these times, we reset \textbf{Arrival} and \textbf{Departure} matrices to scheduled times.
-
-\item \textbf{For more frequent time updates:}\\
-\null \qquad We can specify some locations (using \textit{GPS}) where Wi-Fi is available on the route and send quick location updates to the network.\\
-\null \qquad These locations can be used as \textit{pseudo-stops}, where the Bus Unit directly informs all Bus Stop nodes its location which can be further used to refine time predictions.
+\item \textbf{Bus stop nodes that can access this matrix} (i.e. nodes that are connected to the network):
+\begin{itemize}
+\item Arrival time of next bus at $i$\textsuperscript{th} stop= min\{$i$\textsuperscript{th} row\}
+\item Suppose that $j$ the next bus arriving at $i$\textsuperscript{th} stop $= j$.
+\item Direction of next bus $= j$\textsuperscript{th} element of \textbf{Direction} matrix.
+\item Both Arrival time and Direction of buses needs to be communicated to the commuters.
 \end{itemize}
+\item \textbf{Bus stop nodes that cannot access this matrix} (i.e. nodes that unexpectedly get disconnected):
+\begin{itemize}
+\item Arrival times of each bus estimated using scheduled time and last known whereabouts of buses:\\
+Estimated time = Scheduled time + (last known deviation from scheduled 
+time)
+\item If estimated time shows a large deviation from scheduled time, we will use scheduled time instead of estimated time.
+\item Direction matrix can be updated based on these estimates: Direction of $j$\textsuperscript{th} bus switches when arrival time of stop $m-1$ is crossed.
+\item Similar to the previous case, both Arrival time and Direction of buses needs to be communicated to the commuters.
+\end{itemize}
+\item \textbf{When the bus reaches stop $0$ after a round trip}:
+\begin{itemize}
+\item  The \textbf{Arrival} and \textbf{Departure} matrices are updated to actual/estimated arrival and departure values, and this can be used to keep log of actual arrival and departure times in the system.
+\item Moving average of previous runs can be used to refine predictions.
+\item  After uploading these times, we reset \textbf{Arrival} and \textbf{Departure} matrices to scheduled times.
+\end{itemize}
+\item \textbf{For more frequent time updates:}
+\begin{itemize}
+\item We can specify some locations (using \textit{GPS}) where Wi-Fi is available on the route and send quick location updates to the network.
+\item These locations can be used as \textit{pseudo-stops}, where the Bus Unit directly informs all Bus Stop nodes its location which can be further used to refine time predictions.
+\end{itemize}
+\end{enumerate}
