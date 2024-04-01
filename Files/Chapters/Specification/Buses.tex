@@ -3,12 +3,17 @@
 \begin{itemize}
     \item There are $n$ buses: $0, 1, 2, \ldots n-1$
     \item There are $m$ stops: $0, 1, 2, \ldots m-1$  ($0$: first stop, $m-1$: last stop)
+    \item We have to synchronize the \textit{\gls{24-hour clock}} at each stop
     \item In this system, all bus shifts end at the starting stop, i.e. the bus shift ends when the bus is back at the $0$\textsuperscript{th} stop. The sequence followed in a shift is \\
-          {\bfseries $0$ $\to$ $1$ $\to$ $2$ $\to$ \ldots $\to$ $m-3$ $\to$ $m-2$ $\to$ $m-1$ $\to$ $m-2$ $\to$ $m-3$ \ldots$\to$ $2$ $\to$ $1$ $\to$ $0$}\\
-          Example for m = 4: \\
-          {\bfseries Karakoram(0) $\to$ Kumaon (1) $\to$ Shivalik (2) $\to$ \ac{LHC}(3) $\to$ Shivalik (2) $\to$ Kumaon (1) $\to$ Karakoram (0)}
-    \item We also have to synchronize the \textit{\gls{24-hour clock}} at each stop
+          {\bfseries $0$ $\to$ $1$ $\to$ $2$ $\to$ $3$ $\to$ \ldots $\to$ $m-2$ $\to$ $m-1$ $\to$ $m-2$ $\to$ \ldots$\to$ $3$ $\to$ $2$ $\to$ $1$ $\to$ $0$}\\
 \end{itemize}
 
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]
+        {./Files/Images/Flowchart.png}
+        \caption{\textbf{Example for m = 4}} % Add a caption
+    \end{figure}
+    
 \input{Files/Chapters/Specification/OnTheNetwork}
 \input{Files/Chapters/Specification/Locally}
