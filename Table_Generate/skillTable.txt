@@ -1,114 +1,116 @@
-Navneet Raj & Documentation & Overleaf, LaTeX, GitHub Actions, pandoc\\ 
+Navneet Raj & Documentation & Overleaf, LaTeX, GitHub Actions, Pandoc\\ 
 \hline 
 Sanjay Pooniya & Documentation & Latex\\ 
 \hline 
 Ayush Gupta & Documentation & Research\\ 
 \hline 
-Rishabh Barola & Documentation & RF communication, System design\\ 
-\hline 
 Asmit Singh & Documentation & Documentation\\ 
 \hline 
-Vasu Sharma & Documentation & LaTeX, GitHub, Obsidian/Mermaid, MSWord\\ 
+Harsh Agarwal & Research & Research\\ 
 \hline 
-Harsh Agarwal & Others & Research\\ 
+Abhinav Verma & Research & Research\\ 
 \hline 
-Abhinav Verma & Others & Research\\ 
+Khushika Shringi & Research & Research\\ 
 \hline 
-Khushika Shringi & Others & Research\\ 
+Yash Goel & Research & Research\\ 
 \hline 
-Yash Goel & Others & Research\\ 
+Aryan Gupta & Research & Research\\ 
 \hline 
-Aryan Gupta & Others & Research\\ 
+Aniket Singh & Research & Data transfer with minimum internet usage\\ 
 \hline 
-Aniket Singh & Others & Research based work on how to transfer data with minimum internet usage\\ 
+2021ee10653 & Research & Research\\ 
 \hline 
-2021ee10653 & Others & Research\\ 
+Mridul Ahi & Research & Research\\ 
 \hline 
-Mridul Ahi & Others & Research\\ 
+Eepsita & Research & Research\\ 
 \hline 
-Eepsita & Others & Research\\ 
+Pooja Mahajan & Research & Research\\ 
 \hline 
-Pooja Mahajan & Others & Research\\ 
+Chetan Chaurasia & Research & Research\\ 
 \hline 
-Chetan Chaurasia & Others & Research\\ 
+Vikas Meena & Research & Research\\ 
 \hline 
-Vikas Meena & Others & Research\\ 
+Anshul & Research & Research\\ 
 \hline 
-Anshul & Others & Research\\ 
+Ark Verma & Research & RF communication, GPS modules, Telemetry, Research\\ 
 \hline 
-Ark Verma & Others & RF communication, GPS modules, Telemetry, Research\\ 
+Yash Agarwal & Research & Research\\ 
 \hline 
-Yash Agarwal & Others & Research\\ 
+Sheetal Manatawal & Research & Research\\ 
 \hline 
-Sheetal Manatawal & Others & Research\\ 
+Disha Katia & Research & Research\\ 
 \hline 
-Disha Katia & Others & Research\\ 
+Chirag Gautam & Research & Research\\ 
 \hline 
-Chirag Gautam & Others & Research\\ 
+Shubham Aggarwal & Research & Research, Problem Solving\\ 
 \hline 
-Shubham Aggarwal & Others & Research, Problem Solving\\ 
+Mohit Raj & Research & Research\\ 
 \hline 
-Mohit Raj & Others & Research\\ 
+Ujjwal Yadav & Research & 7 Segment Display\\ 
 \hline 
-Ujjwal Yadav & Others & 7 segment display\\ 
+Aniket Abhiraj & Research & LCD design, Arduino, Trigger identifier for bus, Hardware design.\\ 
 \hline 
-Aniket Abhiraj & Others & LCD design, Arduino, triger identifier for bus, hardware design.\\ 
+Sarthak Kumar Singh & Research & Research on occupancy estimation\\ 
 \hline 
-Sarthak Kumar Singh & Others & Research on occupancy estimation\\ 
+Aditi Shekhar & Research & Research\\ 
 \hline 
-Aditi Shekhar & Others & Research\\ 
+Anchal & Research & Research, Browsing, Brainstorming\\ 
 \hline 
-Anchal & Others & Research, Browsing, Brainstorming\\ 
+Rohan Das & Research & Research\\ 
 \hline 
-Rohan Das & Others & Research\\ 
+Rohan Das & Research & Research\\ 
 \hline 
-Rohan Das & Others & Research\\ 
+Harsh Swaika & Research & Research\\ 
 \hline 
-Harsh Swaika & Others & Research\\ 
+Aditya Jain & Research & Research\\ 
 \hline 
-Aditya Jain & Others & Research\\ 
+Harshit Sachdeva & Research & Research\\ 
 \hline 
-Harshit Sachdeva & Others & Research\\ 
+Kinjal Anchhara & Research & Research\\ 
 \hline 
-Kinjal Anchhara & Others & Research\\ 
+Dhruv Kushwaha & Research & Research, Survey\\ 
 \hline 
-Dhruv Kushwaha & Others & Research, Survey\\ 
+Shubh Chhabra & Research & Research\\ 
 \hline 
-Shubh Chhabra & Others & Research\\ 
+Rishabh Barola & Research & RF communication, System design\\ 
 \hline 
-Pramukh Jain & Others & Hardware selection\\ 
+Pramukh Jain & Research & Hardware selection\\ 
 \hline 
-Oshin Kavdia & Others & Research\\ 
+Oshin Kavdia & Research & Research\\ 
 \hline 
-Kalu Ram Tard & Others & Research\\ 
+Kalu Ram Tard & Research & Research\\ 
 \hline 
-Joel Arun Kumar Yenubotula & Others & ESP32, networks\\ 
+Joel Arun Kumar Yenubotula & Research & ESP32, Networks\\ 
 \hline 
-Ameya Mishra & Others & Research\\ 
+Ameya Mishra & Research & Research\\ 
 \hline 
-Tanmai Merugu & Others & Research\\ 
+Tanmai Merugu & Research & Research\\ 
 \hline 
-Khushvind Maurya & Others & Research\\ 
+Khushvind Maurya & Research & Research\\ 
 \hline 
-Vinay Sah & Others & Research\\ 
+Vinay Sah & Research & Research\\ 
 \hline 
-Shivam Kumar & Others & Research\\ 
+Vasu Sharma & Research & LaTeX, GitHub, Obsidian/Mermaid, MSWord\\ 
 \hline 
-Deepanshu Kumar & Others & Research\\ 
+Shivam Kumar & Research & Research\\ 
 \hline 
-Durgesh Nandini & Others & Research on LoRa wireless comminication\\ 
+Deepanshu Kumar & Research & Research\\ 
 \hline 
-Kaustubh Dev & Others & Research, transmission techniques, Receiver hardware\\ 
+Durgesh Nandini & Research & Research on LoRa wireless comminication\\ 
 \hline 
-Arnav Goel & Others & Research\\ 
+Kaustubh Dev & Research & Research, Transmission techniques, Receiver hardware\\ 
 \hline 
-Ayush Kumar & Others & Research\\ 
+Arnav Goel & Research & Research\\ 
 \hline 
-Bingi Sai Vishal & Others & Analysis and Design of Algorithms, python\\ 
+Ayush Kumar & Research & Research\\ 
 \hline 
-Abhilasa Das & Others & Research\\ 
+Bingi Sai Vishal & Research & Analysis and Design of Algorithms, python\\ 
 \hline 
-Ravi Parihar & Others & Research\\ 
+Abhilasa Das & Research & Research\\ 
 \hline 
-Himanshu Prajapati & Others & GitHub, Research on YT\\ 
+Ravi Parihar & Research & Research\\ 
+\hline 
+Himanshu Prajapati & Research & GitHub, Research on YT\\ 
+\hline 
+Aryan Mishra & Research & Research\\ 
 \hline 
