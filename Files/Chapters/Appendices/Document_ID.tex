@@ -1,0 +1,30 @@
+\renewcommand{\thefootnote}{\alph{footnote}}
+\def\mydate{\leavevmode\hbox{\the\year-\twodigits\month-\twodigits\day}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+\begin{enumerate}[itemsep = 0.1 pt]
+\item{
+\textbf{ID:} P2RS-\mydate-\input{ver}
+}
+      \item{
+            \textbf{Document Type:} Private Release
+            }
+
+      \item{
+            \textbf{Document Authorised by:} \textbf{\href{mailto:mt1210697@maths.iitd.ac.in}{Ayush Gupta}}, \href{mailto:ee1210137@ee.iitd.ac.in}{\textbf{Aryan Mishra}}}
+
+      \item{
+            \textbf{Publication Date:} \today
+            }
+
+      \item
+            {
+            \textbf{Version Number:} \input{ver.tex}\footnote{Tracked automatically in the \textbf{GitHub} Repository.
+                  \textbf{v0.0.1} was the first release after P@ release on March 13, 2024.
+                  Version number is stepped up, based on whether it is a \textbf{Minor Release} or a \textbf{Bug Fix}.
+                  The file after submission at the end of each week is considered a \textbf{Major Release}.}
+            }
+
+      \item{\textbf{GitHub Repository Details:} Invite-only \textbf{GitHub Organisation}
+            \href{https://github.com/ELP305-Cleaning-Machine}{here}.
+            }
+\end{enumerate}

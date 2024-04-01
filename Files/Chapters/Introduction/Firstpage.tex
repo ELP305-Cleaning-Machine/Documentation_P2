@@ -1,4 +1,6 @@
 \renewcommand{\thefootnote}{\alph{footnote}}
+\def\mydate{\leavevmode\hbox{\the\year-\twodigits\month-\twodigits\day}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
 \begin{titlepage}
     \newgeometry{voffset=-1in,textwidth=160mm, textheight=253mm,margin=1in}
    % \newgeometry{hoffset=-1in, voffset=-1in, textwidth=160mm, textheight=253mm, topmargin=22mm, headsep=0mm, headheight=0mm, lmargin=2.2in, marginparpush=0mm,footheight=0mm, footsep=0mm}
@@ -23,7 +25,7 @@
 				 Tribe: CleanTeX
 				\par
             }
-             \vskip0.25in
+             \vskip0.2in
            
              {
 				\Large
@@ -34,57 +36,59 @@
                 Bus Stand Display Unit
 				\par
             }
-            \vskip0.15in
+            \vskip0.1in
              {
 				\fontsize{18}{18}
 				\sffamily
                 
 				\par
             }
-            \vskip0.15in
+            \vskip0.1in
              {
 				\fontsize{16}{16}
 				\sffamily
                 ELP305 : Design and System Laboratory
 				\par
             }
-            \vskip0.15in
+            \vskip0.1in
              {
 				\fontsize{16}{14}
 				\sffamily
                 \textbf{Indian Institute of Technology, Delhi}
                 \par
             }
-    \vspace{0.5in}
+    \vspace{0.2in}
     {
         \normalsize
         %\fontsize{10}{12}
         \sffamily
-        \textbf{\textcolor{tuberlindarkgray}{Document Authorised by}}\par \vspace{0.125cm}
+        \textbf{\textcolor{tuberlindarkgray}{Document Authorised by}}\par \vspace{0.12cm}
         {\href{https://www.linkedin.com/in/ayush-gupta-undergraduate/}{Ayush Gupta}, \href{http://linkedin.com/in/aryan-mishra-04j}{Aryan Mishra}}
 
-        \vspace{0.25cm}
-        \textbf{\textcolor{tuberlindarkgray}{Release Date}}\par \vspace{0.125cm}
+        \vspace{0.24cm}
+        \textbf{\textcolor{tuberlindarkgray}{Release Date}}\par \vspace{0.12cm}
         {\today}
 
-        \vspace{0.25cm}
-        \textbf{\textcolor{tuberlindarkgray}{Release Version}}\par \vspace{0.125cm}
+        \vspace{0.24cm}
+        \textbf{\textcolor{tuberlindarkgray}{Release Version}}\par \vspace{0.12cm}
         \textbf{\input{ver}}\footnote{Tracked automatically in the \textbf{GitHub} Repository.
                   \textbf{v0.0.1} was the first release after P2 release on March 13, 2024.
                   Version number is stepped up, based on whether it is a \textbf{Minor Release} or a \textbf{Bug Fix}.
-                  The file after submission at the end of each week is considered a \textbf{Major Release}.}
-
-        \vspace{0.25cm}
-        \textbf{\textcolor{tuberlindarkgray}{Release Type}}\par \vspace{0.125cm}
+                  The file after submission at the end of each week is considered a \textbf{Major Release}.}\par
+    \vspace{0.24cm}
+        \textbf{\textcolor{tuberlindarkgray}{Document ID}}\par \vspace{0.12cm}
+        {P2RS-\mydate-\input{ver}}\par
+        \vspace{0.24cm}
+        \textbf{\textcolor{tuberlindarkgray}{Release Type}}\par \vspace{0.12cm}
         {Private Release}
 
-        \vspace{0.25cm}
-        \textbf{\textcolor{tuberlindarkgray}{Terms Of Use}}\par \vspace{0.125cm}
+        \vspace{0.24cm}
+        \textbf{\textcolor{tuberlindarkgray}{Terms Of Use}}\par \vspace{0.12cm}
         {All Rights Reserved}
 
-        \vspace{0.25cm}
-        \textbf{\textcolor{tuberlindarkgray}{Project Details}}\par \vspace{0.125cm}
-        {This project is being managed on \href{https://github.com/ELP305-Cleaning-Machine}{GitHub} and the latest version of this report is hosted \href{https://2nav.github.io/TribeC/}{here}.}
+        \vspace{0.24cm}
+        \textbf{\textcolor{tuberlindarkgray}{Project Details}}\par \vspace{0.12cm}
+        {This project is being managed on \href{https://github.com/ELP305-Cleaning-Machine}{GitHub} and the latest version of this report is hosted \href{https://2nav.github.io/TribeC/}{\textcolor{blue}{here}}.}
     }
 \end{titlepage}
 \afterpage{\restoregeometry}    
