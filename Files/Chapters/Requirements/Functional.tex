@@ -1,59 +1,59 @@
 \section{Functional Requirements}
 
 \begin{enumerate}
-    \item \underline{\textsc{Passenger Wait Times}} : Speeding to compensate for delays, even after a passenger waits over a minute and notifies the driver, is prohibited. Safety is paramount and arrival times may fluctuate accordingly.
+    \item \underline{\textsc{Passenger Wait Times}} : Speeding to compensate for delays, even after a passenger waits over a minute and notifies the driver, is prohibited. Safety is paramount and arrival times may fluctuate accordingly
 
-    \item \underline{\textsc{Driver Notification}} : There's no obligation to inform the driver if a passenger waits for more than a minute. Waiting time is restricted to passenger boarding and deboarding.
+    \item \underline{\textsc{Driver Notification}} : There's no obligation to inform the driver if a passenger waits for more than a minute. Waiting time is restricted to passenger boarding and deboarding
 
-    \item \underline{\textsc{Bus Full Indicator}} : The driver is not obligated to provide information to waiting passengers regarding the availability of space.
+    \item \underline{\textsc{Bus Full Indicator}} : The driver is not obligated to provide information to waiting passengers regarding the availability of space
 
-    \item \underline{\textsc{Road Incidents Update}} : When there's an unexpected delay or a roadblock, the display will flash '999' to signal an emergency.
+    \item \underline{\textsc{Road Incidents Update}} : When there's an unexpected delay or a roadblock, the display will flash '999' to signal an emergency
 
-    \item \index{Feedback Mechanism}\underline{\textsc{Feedback Mechanism}} : A digital interface could be implemented for users to provide feedback or report issues related to bus services.
+    \item \index{Feedback Mechanism}\underline{\textsc{Feedback Mechanism}} : A digital interface could be implemented for users to provide feedback or report issues related to bus services
 
-    \item \index{Automation}\underline{\textsc{Automation of Bus Unit Operation}} :  It needs to be fully automated, manual input from the driver or staff for every bus direction change or stop is not expected.
+    \item \index{Automation}\underline{\textsc{Automation of Bus Unit Operation}} :  It needs to be fully automated, manual input from the driver or staff for every bus direction change or stop is not expected
 
-    \item \underline{\textsc{Wait Time Interface}} : An interface can be devised to allow individuals heading to the bus stop to access information regarding the wait time.
+    \item \underline{\textsc{Wait Time Interface}} : An interface can be devised to allow individuals heading to the bus stop to access information regarding the wait time
 
-    \item \underline{\textsc{Passenger Notification}} : Notifying the bus driver about a waiting passenger does not affect the bus route, even if the bus is empty.
+    \item \underline{\textsc{Passenger Notification}} : Notifying the bus driver about a waiting passenger does not affect the bus route, even if the bus is empty
 
-    \item \underline{\textsc{Empty Bus Stops}} : The bus stops at empty bus stop as well, for passenger deboarding.
+    \item \underline{\textsc{Empty Bus Stops}} : The bus stops at empty bus stop as well, for passenger deboarding
 
-    \item \underline{\textsc{System Timeline}} : The desired timeline for the development, testing, and deployment of the system is April 25th, 2025.
+    \item \underline{\textsc{System Timeline}} : The desired timeline for the development, testing, and deployment of the system is April 25th, 2025
 
     \item \index{Real-Time Tracking}\underline{\textsc{Real-Time Tracking}} : Real-time tracking of every bus is not required, but it is suggested to keep track of location and travel activity logs for around a month. Only have to keep a log of arrival and departure times at every bus stop, and this activity log is to be stored for the long term. (Can be done at appropriate frequency, no need for real time)
 
-    \item \index{U-Turn}\underline{\textsc{Bus \gls{U-turn}}} : There may not be sufficient space at every stop for the bus to make a \textit{\gls{U-turn}} and onboard passengers on the reverse path. Bus follows its route strictly, does not make U-Turns.
+    \item \index{U-Turn}\underline{\textsc{Bus \gls{U-turn}}} : There may not be sufficient space at every stop for the bus to make a \textit{\gls{U-turn}} and onboard passengers on the reverse path. Bus follows its route strictly, does not make U-Turns
 
-    \item \index{Accessibility}\underline{\textsc{Accessibility Priority}} : Prioritizing full accessibility for all campus residents on the bus service is not necessary.
+    \item \index{Accessibility}\underline{\textsc{Accessibility Priority}} : Prioritizing full accessibility for all campus residents on the bus service is not necessary
 
-    \item \underline{\textsc{Location Exchange}} : There's no need for each bus to be informed about the location of other buses.
+    \item \underline{\textsc{Location Exchange}} : There's no need for each bus to be informed about the location of other buses
 
-    \item \underline{\textsc{Early Departure}} : Buses should not depart early, even if passengers have been waiting for over a minute, as it can confuse passengers and cause inconvenience.
+    \item \underline{\textsc{Early Departure}} : Buses should not depart early, even if passengers have been waiting for over a minute, as it can confuse passengers and cause inconvenience
 
-    \item \underline{\textsc{Stop Wait Time}} : Buses typically aim to depart from each stop promptly after passengers have finished boarding and alighting.
+    \item \underline{\textsc{Stop Wait Time}} : Buses typically aim to depart from each stop promptly after passengers have finished boarding and alighting
 
-    \item \underline{\textsc{Arrival and Departure Logging}} : The logging of bus arrival and departure must be automatic and cannot rely on manual input, ensuring accuracy and efficiency in tracking bus movements.
+    \item \underline{\textsc{Arrival and Departure Logging}} : The logging of bus arrival and departure must be automatic and cannot rely on manual input, ensuring accuracy and efficiency in tracking bus movements
 
-    \item \underline{\textsc{Centralized Management}} : The bus service is centrally managed, with everything logged. While there's no real-time monitoring, logs are available for review.
+    \item \underline{\textsc{Centralized Management}} : The bus service is centrally managed, with everything logged. While there's no real-time monitoring, logs are available for review
 
-    \item \underline{\textsc{Passenger Drop-off Notification}} : There is no notification received when a passenger enters the bus regarding their drop-off.
+    \item \underline{\textsc{Passenger Drop-off Notification}} : There is no notification received when a passenger enters the bus regarding their drop-off
 
-    \item \underline{\textsc{Bus Bypass Protocol}} : If the bus is already full, the driver does not need to stop the bus at every subsequent stop.
+    \item \underline{\textsc{Bus Bypass Protocol}} : If the bus is already full, the driver does not need to stop the bus at every subsequent stop
 
-    \item \underline{\textsc{Connectivity Focus}} :Connectivity is exclusively between buses and stops, with no direct communication link to passengers.
+    \item \underline{\textsc{Connectivity Focus}} :Connectivity is exclusively between buses and stops, with no direct communication link to passengers
 
-    \item \underline{\textsc{Capacity Information}} : It is unnecessary to display a bus's full status at upcoming stops, as passengers may alight at any point, which remains unpredictable to the driver.
+    \item \underline{\textsc{Capacity Information}} : It is unnecessary to display a bus's full status at upcoming stops, as passengers may alight at any point, which remains unpredictable to the driver
 
-    \item \underline{\textsc{Emergency Stops}} : In emergency situations, like a passenger feeling nauseous, the bus will make unscheduled stops between designated stops to address the issue and prioritizing passenger safety and well-being.
+    \item \underline{\textsc{Emergency Stops}} : In emergency situations, like a passenger feeling nauseous, the bus will make unscheduled stops between designated stops to address the issue and prioritizing passenger safety and well-being
 
-    \item \underline{\textsc{Waiting Passengers}} : The system should distinguish between transient presence and waiting passengers standing up to 5 feet from the bus stop pole for more than 30 seconds. Any passerby standing for 0.5 minutes would qualify them as a potential passenger, this wrong identification is allowed.
+    \item \underline{\textsc{Waiting Passengers}} : The system should distinguish between transient presence and waiting passengers standing up to 5 feet from the bus stop pole for more than 30 seconds. Any passerby standing for 0.5 minutes would qualify them as a potential passenger, this wrong identification is allowed
 
-    \item \underline{\textsc{Following Route}} : Route to be followed and stops to be made should be a fully automated decision.
+    \item \underline{\textsc{Following Route}} : Route to be followed and stops to be made should be a fully automated decision
 
-    \item \underline{\textsc{Location of Waiting Passengers}} : The passenger can be waiting anywhere along the route, not necessarily at the next bus stop.
+    \item \underline{\textsc{Location of Waiting Passengers}} : The passenger can be waiting anywhere along the route, not necessarily at the next bus stop
 
-    \item \underline{\textsc{Account for Delays}}: Assuming the bus may not always reach X at 8 AM sharp to start the shift.
+    \item \underline{\textsc{Account for Delays}}: Assuming the bus may not always reach X at 8 AM sharp to start the shift
 \end{enumerate}
 
 % \begin{enumerate}
