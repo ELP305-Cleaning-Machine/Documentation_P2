@@ -6,7 +6,7 @@
    % \newgeometry{hoffset=-1in, voffset=-1in, textwidth=160mm, textheight=253mm, topmargin=22mm, headsep=0mm, headheight=0mm, lmargin=2.2in, marginparpush=0mm,footheight=0mm, footsep=0mm}
 
     % Logo right corner - change to black-white if needed
-       \begin{textblock*}{6cm}(14cm,4cm)
+       \begin{textblock*}{2cm}(14cm,4cm)
        \includegraphics[width=2in]{Files/Images/iitdlogo.png}
        %\includegraphics[width=50mm]{def/TU_Logo_lang_RGB_schwarz.pdf}
        \end{textblock*}
@@ -57,11 +57,14 @@
                 \textbf{Indian Institute of Technology, Delhi}
                 \par
             }
-    \vspace{0.2in}
+    \vspace{0.85in}
     {
         \normalsize
         %\fontsize{10}{12}
         \sffamily
+        \textbf{\textcolor{tuberlindarkgray}{Document ID}}\par \vspace{0.12cm}
+                \hyperlink{Target_DocInfo}{\textbf{P2RS-\mydate-\input{ver}}}\par
+                \vspace{0.24cm}  
         \textbf{\textcolor{tuberlindarkgray}{Document Authorised by}}\par \vspace{0.12cm}
         {\href{https://www.linkedin.com/in/ayush-gupta-undergraduate/}{Ayush Gupta}, \href{http://linkedin.com/in/aryan-mishra-04j}{Aryan Mishra}}
 
@@ -71,14 +74,9 @@
 
         \vspace{0.24cm}
         \textbf{\textcolor{tuberlindarkgray}{Release Version}}\par \vspace{0.12cm}
-        \textbf{\input{ver}}\footnote{Tracked automatically in the \textbf{GitHub} Repository.
-                  \textbf{v0.0.1} was the first release after P2 release on March 13, 2024.
-                  Version number is stepped up, based on whether it is a \textbf{Minor Release} or a \textbf{Bug Fix}.
-                  The file after submission at the end of each week is considered a \textbf{Major Release}.}\par
+        \textbf{\hyperlink{Target_DocInfo}{\input{ver}}}\par
     \vspace{0.24cm}
-        \textbf{\textcolor{tuberlindarkgray}{Document ID}}\par \vspace{0.12cm}
-        {P2RS-\mydate-\input{ver}}\par
-        \vspace{0.24cm}
+        
         \textbf{\textcolor{tuberlindarkgray}{Release Type}}\par \vspace{0.12cm}
         {Private Release}
 
@@ -88,7 +86,7 @@
 
         \vspace{0.24cm}
         \textbf{\textcolor{tuberlindarkgray}{Project Details}}\par \vspace{0.12cm}
-        {This project is being managed on \href{https://github.com/ELP305-Cleaning-Machine}{GitHub} and the latest version of this report is hosted \href{https://2nav.github.io/TribeC/}{\textcolor{blue}{here}}.}
+        {This project is being managed on \href{https://github.com/ELP305-Cleaning-Machine}{GitHub} and the latest version of this report is hosted \href{https://2nav.github.io/TribeC/}{\textcolor{blue}{here}}}
     }
 \end{titlepage}
-\afterpage{\restoregeometry}    
+\afterpage{\restoregeometry}
