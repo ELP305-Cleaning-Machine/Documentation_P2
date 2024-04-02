@@ -13,8 +13,9 @@
 \usepackage{subcaption}
 \usepackage{titlesec}
 \usepackage{siunitx}
-\usepackage[hidelinks,pdfa,pdfusetitle]{hyperref}
+\usepackage[hidelinks,pdfa,pdfusetitle,pageanchor]{hyperref}
 \usepackage[toc]{glossaries}
+\usepackage{pdfpages,caption}
 \usepackage{array}
 \usepackage{float}
 \usepackage{fancyhdr}
@@ -29,6 +30,8 @@
 \usepackage{tfrupee}  
 \usepackage{etoolbox}
 \usepackage{listings}
+\usepackage{hyperref}
+
 \usepackage[abspage,user,lastpage]{zref}
 \usepackage[hang]{footmisc}       %for aligning footnote
 \usepackage[backend=biber,refsection=section,sorting=none,style=numeric, defernumbers=true,safeinputenc]
@@ -194,12 +197,17 @@
 \input{Files/Chapters/Specification/Buses}
 \input{Files/Chapters/Specification/Passenger}
 \input{Files/Chapters/Specification/Frontend}
+\input{Files/Chapters/Specification/Cost}
+
 \input{Files/Chapters/Specification/Manpower}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \printnoidxglossaries
 %%%%%% Appendices %%%%
 
 \chapter{References}
+
+\vbox{\printbibliography[keyword={cite},title={Quoted Sources}]}
+\addcontentsline{toc}{section}{Quoted Sources}
 \addcontentsline{toc}{section}{Background Research}
 
 \vbox{
