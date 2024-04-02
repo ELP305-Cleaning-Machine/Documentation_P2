@@ -14,6 +14,14 @@
         {./Files/Images/Flowchart.png}
         \caption{\textbf{Example route for m = 4}} % Add a caption
     \end{figure}
-    
+
+\begin{itemize}
+    \item All these stops will be connected to the institute’s WiFi service, which will be used to transmit relevant information to all the stops 
+    \item⁠ We use WiFi even when the ESP32 has the option of BLE because:
+\begin{itemize}
+    \item BLEs indoor range is around 100 m, but outdoors the signals are attenuated and therefore the range reduces
+    \item We need to cover a route of approximately 2 km using 4 bus units. Therefore using BLE is not feasible unless we can have bus stops every 50-100 metres, which seems impractical.
+\end{itemize}
+\end{itemize}
 \input{Files/Chapters/Specification/OnTheNetwork}
 \input{Files/Chapters/Specification/Locally}
