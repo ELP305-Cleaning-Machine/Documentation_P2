@@ -2,6 +2,7 @@
 \documentclass[12pt,a4paper]{report}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%all_packages%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table, dvipsnames, svgnames]{xcolor} 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern} % needed on MikTeX
 \usepackage[utf8]{inputenc}
@@ -32,6 +33,7 @@
 \usepackage{listings}
 \usepackage{hyperref}
 
+
 \usepackage[abspage,user,lastpage]{zref}
 \usepackage[hang]{footmisc}       %for aligning footnote
 \usepackage[backend=biber,refsection=section,sorting=none,style=numeric, defernumbers=true,safeinputenc]
@@ -40,7 +42,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%preamble and packages for first page%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[dvipsnames, svgnames]{xcolor}
+% \usepackage[dvipsnames, svgnames]{xcolor}
 \usepackage{tikz}
 \usepackage{xspace}
 \usepackage{pdfpages}
@@ -79,7 +81,6 @@
       \setlength{\parsep}{\bibparsep}}}
   {\endlist}
   {\item}
-
 
 % adding bibliography sources
 \addbibresource{Files/Chapters/Appendices/references.bib}
@@ -133,6 +134,7 @@
 	\fancyhead[L]{\nouppercase{\rightmark}}
 	\fancyheadoffset[R]{0mm}
 	}
+
 %%%%%%%%%%%%%%%%%%%%%%%% Start of Document %%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -195,7 +197,6 @@
 
 \chapter{Specifications}
 \input{Files/Chapters/Specification/Buses}
-\input{Files/Chapters/Specification/Passenger}
 \input{Files/Chapters/Specification/Frontend}
 \input{Files/Chapters/Specification/Cost}
 
