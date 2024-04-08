@@ -32,10 +32,10 @@
 \usepackage{etoolbox}
 \usepackage{listings}
 \usepackage{hyperref}
-
-
+\usepackage{textcomp}
 \usepackage[abspage,user,lastpage]{zref}
 \usepackage[hang]{footmisc}       %for aligning footnote
+
 \usepackage[backend=biber,refsection=section,sorting=none,style=numeric, defernumbers=true,safeinputenc]
 {biblatex}
 \makeindex[columns = 2, title = AlphabeticalIndex, intoc, options =-s indcomma]
@@ -50,7 +50,8 @@
 \usepackage{graphicx}
 \usepackage{hyperxmp}
 \usepackage{url}
-\urlstyle{sf}
+\urlstyle{rm}
+\def\UrlFont{\bfseries\rmfamily\color{blue}} 
 \usepackage{ccicons} % use Creative Commons icons
 \usepackage[absolute]{textpos} % exact position logo
 \usepackage{amsmath} % https://ctan.org/pkg/amsmath for mathematical features
@@ -205,7 +206,9 @@
 \printnoidxglossaries
 %%%%%% Appendices %%%%
 
-\chapter{References}
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
+\hypertarget{QS}{}
 
 \vbox{\printbibliography[keyword={cite},title={Quoted Sources}]}
 \addcontentsline{toc}{section}{Quoted Sources}
@@ -220,11 +223,18 @@
 \addcontentsline{toc}{section}{Softwares Used}
 
 
-\chapter[Document Statistics]{A. Document Statistics}
+
+\chapter*{A. Document Statistics}
+\addcontentsline{toc}{chapter}{References}
+
 \input{Files/Chapters/Appendices/Document_Statistics}
-\chapter[Readability Index]{B. Readability Index}
+\chapter*{B. Readability Index}
+\addcontentsline{toc}{chapter}{References}
+
 \input{Files/Chapters/Appendices/Readability_Indices}
-\chapter[{Document Information}]{C. Document Information}
+\chapter*{C. Document Information}
+\addcontentsline{toc}{chapter}{References}
+
 \input{Files/Chapters/Appendices/Document_ID}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
