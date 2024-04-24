@@ -202,6 +202,11 @@
 \input{Files/Chapters/Specification/Frontend}
 \input{Files/Chapters/Specification/Cost}
 \input{Files/Chapters/Specification/Manpower}
+
+\chapter{Design}
+\input{Files/Chapters/Design/Protocol}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \printnoidxglossaries
 %%%%%% Appendices %%%%
@@ -230,18 +235,19 @@
 
 \chapter*{Appendices}
 \begingroup
-\setcounter{section}{0}
+%\setcounter{section}{0}
 \renewcommand{\thesection}{\Alph{section}}
 \addcontentsline{toc}{chapter}{Appendices}
-\section{Document Statistics}
+\section*{A. Document Statistics}
+\addcontentsline{toc}{section}{A. Document Statistics}
 \input{Files/Chapters/Appendices/Document_Statistics}
 \newpage
-\section{Readability Index}
-\
+\section*{B. Readability Index}
+\addcontentsline{toc}{section}{B. Readability Index}
 \input{Files/Chapters/Appendices/Readability_Indices}
 \newpage
-\section{Document Information}
-
+\section*{C. Document Information}
+\addcontentsline{toc}{section}{C. Document Information}
 \input{Files/Chapters/Appendices/Document_ID}
 \endgroup
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
