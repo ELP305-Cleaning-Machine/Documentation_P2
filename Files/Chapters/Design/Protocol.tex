@@ -1,6 +1,6 @@
-\subsection{Protocol and Components}
-The following are the possible network architectures we will be using:
-\subsubsection{ESP NOW}
+\section{Network Protocol}
+The following are the network architectures we will be using:
+\subsection{ESP NOW}
 ESP-NOW is a wireless communication protocol based on the data-link layer, which reduces the five layers of the OSI model to only one. This way, the data need not be transmitted through the network layer, the transport layer, the session layer, the presentation layer, and the application layer. Also, there is no need for packet headers or unpackers on each layer, which leads to a quick response reducing the delay caused by packet loss in congested networks. 
 \begin{figure}[H]
     \centering
@@ -19,7 +19,7 @@ Here are the key features of the ESP NOW Protocol:
 The devices communicates directly via the use of the data link and pairing do not require the Wi-Fi connection. Pairing can be done by initiating and multiple pairing can be done like one initiator can pair with multiple responder. Using the RSSI, during the paring the device distance can be found and that distance can be authorised and the device at that distance can be paired. The protocol supports long distance communication which will be helpful in using it outdoors. The portocol is compatible with many sensors implying its wide usability to interact among the units or the user and the unit. ESP NOW can also take data logs from multiple responders for analysis. This will facilitate the user to gather the data from the units without needing to go to the unit, again, the units can communicate the same among themselves to correctly estimate the time or find any abnormality in real time. 
 
 
-\subsubsection{ESP-WIFI-MESH}
+\subsection{ESP-WIFI-MESH}
 ESP-WIFI-MESH is a networking protocol that operates on top of the Wi-Fi protocol. It facilitates the interconnection of numerous devices, referred to as nodes, across a wide physical area, including both indoor and outdoor spaces, within a single WLAN (Wireless Local-Area Network).It is self-organizing and self-healing meaning the network can be built and maintained autonomously.
 
 \begin{figure}[H]
