@@ -1,33 +1,22 @@
-# User Manual
 
-## Quick Start Guide
+# CoolBUS: User Manual
 
-1. **Initialization**: Turn on the bus stop display unit. Ensure it's receiving power from the solar panel.
-2. **Display Activation**: Check that the LED matrix display shows the current time and bus arrival estimates.
-3. **Out of Service Protocol**: If a bus is out of service, activate the RED switch to update the display status.
+## Introduction
 
-## System Overview
+Welcome to our innovative bus tracking system designed to enhance the Bus transportation experience in IIT Delhi. Our system utilizes ESP32 technology to provide real-time updates and improve service reliability. Commuters at each stop are informed via a display unit, which indicates the **anticipated arrival time** of the next bus. Our system comprises two integral components: **units installed on the buses** and **display units at the stops**
 
-- **Accuracy**: The timer display boasts an accuracy of within ±1 minute under normal operating conditions.
-- **Operational Constraints**: The system operates from 0700 to 1930 hours, with automatic power management.
-- **Visibility**: Designed for clear visibility up to 8 feet away, even in varied weather conditions like smog and rain.
-- **Maintenance**: Requires minimal upkeep.
+## Out of Service Indicator
 
-## Detailed Features
+- **Button Activation**: When the out-of-service button (boot push button on the bus unit ESP32) is pressed and the bus is within range of any bus stop, the display will show **"Out of Service"**.
 
-- **Backend Architecture**: Utilizes efficient data storage and timing algorithms to estimate bus arrivals with high precision.
-- **Frontend Design**: The user interface is intuitive, providing real-time updates and error notifications (display reads '999' for errors).
-- **Feedback System**: Includes a mechanism for user feedback and reporting issues related to bus services.
-- **Resilience**: The display unit is built to withstand all weather conditions experienced in Delhi.
+## Passenger Waiting Detection
 
-## Handling Interruptions
+- **Sensor Activation**: If the PIR sensor detects a passenger waiting (emulated by the boot push button pressed on the bus stop ESP32) and the bus is within the range of any stop, the bus unit LED will blink twice, indicating that the bus is approaching.
 
-- **Midway Stops**: The system dynamically adjusts the timer to account for unexpected delays, ensuring continued accuracy.
-- **Bus Out of Service**: When a bus is marked out of service, the system immediately reflects this change on the display for commuters' convenience.
+## Bus Halt Timers
 
-## Additional Information
+- **Bus Stop Halt**: If the bus halts within a bus stop region, this will be recognized as a bus stop, and all timers will be updated accordingly.
+- **Near Bus Stop Halt**: If the bus halts in the range of a bus stop but not within the bus stop region, all timers will pause.
+- **Outside Bus Stop Range**: If the bus stops outside the range of all bus stops, the timers will continue but will pause after reaching a lower limit of **1**.
 
-- **Centralized Control**: All operations are centrally managed, with detailed logs available for performance review.
-- **Emergency Stops**: In case of emergencies, buses follow a predefined protocol to ensure passenger safety.
-
-For a comprehensive understanding of the system, including diagrams and technical specifications, please refer to the full project report.
+For further assistance, please refer to the full project report.
