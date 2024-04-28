@@ -1,6 +1,6 @@
 \section{Network}
 \subsection{ESP NOW Protocol}
-ESP-NOW is a wireless communication protocol based on the data-link layer, which reduces the five layers of the OSI model to only one. This way, the data need not be transmitted through the network layer, the transport layer, the session layer, the presentation layer, and the application layer. Also, there is no need for packet headers or unpackers on each layer, which leads to a quick response reducing the delay caused by packet loss in congested networks. 
+ESP-NOW is a wireless communication protocol based on the data-link layer, which reduces the five layers of the \gls{OSI model} to only one. This way, the data need not be transmitted through the network layer, the transport layer, the session layer, the presentation layer, and the application layer. Also, there is no need for packet headers or unpackers on each layer, which leads to a quick response reducing the delay caused by packet loss in congested networks.{\tiny \textcolor{white}{\ac{OSI}}}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{Files/Images/model-en.png}
@@ -10,9 +10,9 @@ ESP-NOW is a wireless communication protocol based on the data-link layer, which
 Here are the key features of the ESP NOW Protocol:
 \begin{itemize}
     \item It has a fast and user-friendly pairing method that is suitable for connecting “one-to-many” and “many-to-many” devices, while also controlling them
-    \item Occupies fewer CPU and flash resources
-    \item Can be used as an independent protocol that helps with device provisioning, debugging, and firmware upgrades
-    \item  ECDH and AES algorithms make data transmission more secure
+    \item Occupies fewer CPU and flash resources{\tiny \textcolor{white}{\ac{ECDH}}}
+    \item Can be used as an independent protocol that helps with device provisioning, debugging, and firmware upgrades{\tiny \textcolor{white}{\ac{AES}}}
+    \item  \gls{ECDH} and \gls{AES}  algorithms make data transmission more secure
     \item The window synchronization mechanism greatly reduces power consumption
 \end{itemize}
 The devices communicates directly via the use of the data link and pairing do not require the Wi-Fi connection. Pairing can be done by initiating and multiple pairing can be done like one initiator can pair with multiple responder. Using the RSSI, during the paring the device distance can be found and that distance can be authorised and the device at that distance can be paired. The protocol supports long distance communication which will be helpful in using it outdoors. The portocol is compatible with many sensors implying its wide usability to interact among the units or the user and the unit. ESP NOW can also take data logs from multiple responders for analysis. This will facilitate the user to gather the data from the units without needing to go to the unit, again, the units can communicate the same among themselves to correctly estimate the time or find any abnormality in real time. 
@@ -37,5 +37,5 @@ Here are the key features of the ESP-WIFI-MESH:
 \end{itemize}
 
 \subsection{RSSI}
-RSSI stands for Received Signal Strength Indicator. It measures how well your device can hear a signal from an access point or router. It’s useful for determining if you have enough signal to get a good wireless connection. Due to the authentication provided by the channel and the incidence of waves from paths of different length, the received signal power is not the same as the transmitted power and RSSI is a measured from the client (receiver). \\
+RSSI stands for Received Signal Strength Indicator. It measures how well your device can hear a signal from an access point or router. It’s useful for determining if you have enough signal to get a good wireless connection. Due to the authentication provided by the channel and the incidence of waves from paths of different length, the received signal power is not the same as the transmitted power and RSSI is a measured from the client (receiver).{\tiny \textcolor{white}{\ac{RSSI}}}{\tiny \textcolor{white}{\ac{IEEE}}}\\
 RSSI is a term used to measure the relative quality of a received signal to a client device, but has no absolute value. The IEEE 802.11 standard (a big book of documentation for manufacturing Wi-Fi equipment) specifies that RSSI can be on a scale of 0 to up to 255 and that each chipset manufacturer can define their own “RSSI\_Max” value.  \\
