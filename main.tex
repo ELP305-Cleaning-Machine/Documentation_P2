@@ -33,6 +33,9 @@
 \usepackage{listings}
 \usepackage{hyperref}
 \usepackage{textcomp}
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning}
+
 \usepackage[abspage,user,lastpage]{zref}
 \usepackage[hang]{footmisc}       %for aligning footnote
 
@@ -205,9 +208,11 @@
 
 
 \chapter{Design}
+\input{Files/Chapters/Design/Process}
 \input{Files/Chapters/Design/Protocol}
 \input{Files/Chapters/Design/Backend}
 \input{Files/Chapters/Design/Components}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \printnoidxglossaries
 %%%%%% Appendices %%%%
