@@ -7,7 +7,7 @@ Welcome to our innovative bus tracking system designed to enhance the Bus transp
 
 ## Out of Service Indicator
 
-- **Button Activation**: When the out-of-service button (boot push button on the bus unit ESP32) is pressed and the bus is within range of any bus stop, the display will show **"Out of Service"**.
+- **Button Activation**: When the out-of-service button (boot push button on the bus unit ESP32) is pressed and the bus is within range of any bus stop, the display will show **"OOS"**.
 
 ## Passenger Waiting Detection
 
