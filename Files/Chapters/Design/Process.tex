@@ -1,0 +1,17 @@
+
+
+\section{Process Summary}
+
+This is the overall view of the finalized design:
+\begin{itemize}
+
+\item \textbf{Initialization: }At the outset, when the bus departs from the depot, the ETA for each bus stop (A and B) will be indicated as 0. Only when the bus arrives at stop A and departs for the first time do bus stop devices generate and exhibit ETAs.
+
+\item
+\textbf{Stop A is in contact with Stop B: }
+Whenever the bus departs from stop A, ETA is updated at bus stop B; conversely, when the bus returns from stop B to stop A, ETA is also updated at stop A. When a bus stops within a scalable range of any of the bus stops (bus stop units within the scalable range can observe the bus unit), but not in the designated bus stop area, the nearest bus stop unit determines the bus stop's halt time (since the bus unit transmits a signal to the nearest bus stop units). The bus stop unit responsible for detecting the bus's halt promptly notifies the adjacent bus stops, resulting in the freezing of their timers as well, upon detection of the bus's halt. At this particular stopover, the bus may be withdrawn from service.In the event that BUS unit B is not operational, the signal is transmitted to the closest bus stop (where the initial detection of the halt occurred; this signal is subsequently transmitted to the adjacent bus stop, and so forth).
+
+\item
+\textbf{Halt outside range: }
+In the event that a bus comes to a complete stop in an area beyond the scanning range of any bus stop unit, the timers within the bus stop commence a countdown process until a predetermined threshold is met (or when the bus's expected top arrives within the scannable range of the bus stop).The timers will remain in the frozen state until bus unit B is detected and passes within the scannable range of the bus stop, which is the location where the bus is en route to next.When a passenger is detected by a PIR sensor at a bus stop and the bus is within a visible range of the stop, a notification signal is transmitted to the bus unit that the passengers are awaiting.
+\end{itemize}
