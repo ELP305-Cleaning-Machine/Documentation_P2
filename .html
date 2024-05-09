@@ -1,0 +1,2676 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>main</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<div class="titlepage">
+<div class="textblock*">
+<p><span>2cm</span>(14cm,4cm) <img src="Files/Images/iitdlogo.png"
+style="width:2in" alt="image" /></p>
+</div>
+<p>Tribe: CoolBUS</p>
+<p><strong>NEXTBUS</strong></p>
+<p>ELP305 : Design and System Laboratory</p>
+<p><strong>Indian Institute of Technology, Delhi</strong></p>
+<p><strong><span style="color: tuberlindarkgray">Document
+ID</span></strong></p>
+<p><a
+href="#Target_DocInfo"><strong>P2RS--&lt;10 0-&lt;10 0-v1.1.22</strong>
+</a></p>
+<p><strong><span style="color: tuberlindarkgray">Document Authorised
+by</span></strong></p>
+<p><span><a
+href="https://www.linkedin.com/in/ayush-gupta-undergraduate/">Ayush
+Gupta</a>, <a href="http://linkedin.com/in/aryan-mishra-04j">Aryan
+Mishra</a></span></p>
+<p><strong><span style="color: tuberlindarkgray">Release
+Date</span></strong></p>
+<p><span>2024-05-09</span></p>
+<p><strong><span style="color: tuberlindarkgray">Release
+Version</span></strong></p>
+<p><strong><a href="#Target_DocInfo">v1.1.22 </a></strong></p>
+<p><strong><span style="color: tuberlindarkgray">Release
+Type</span></strong></p>
+<p><span>Private Release</span></p>
+<p><strong><span style="color: tuberlindarkgray">Terms Of
+Use</span></strong></p>
+<p><span>All Rights Reserved</span></p>
+<p><strong><span style="color: tuberlindarkgray">Project
+Details</span></strong></p>
+<p><span>This project is being managed on <a
+href="https://github.com/ELP305-Cleaning-Machine">GitHub</a> and the
+latest version of this report is hosted <a
+href="https://2nav.github.io/TribeC/"><span
+style="color: blue">here</span></a></span></p>
+</div>
+<h1 id="introduction">Introduction</h1>
+<h2 id="overall-coordinators">Overall Coordinators</h2>
+<div class="center">
+<p><span id="table:oc" label="table:oc"></span></p>
+<div class="longtable">
+<p><span> | n | e | E | c| </span> <strong>Name</strong> &amp;
+<strong>Entry Number</strong> &amp; <strong>Email ID</strong> &amp;
+<strong>IF</strong><br />
+<a href="https://www.linkedin.com/in/ayush-gupta-undergraduate/">Ayush
+Gupta</a> &amp; 2021MT10697 &amp; <a
+href="mailto:mt1210697@maths.iitd.ac.in">mt1210697@maths.iitd.ac.in</a>
+&amp; 1.0<br />
+<a href="https://www.linkedin.com/in/aryan-mishra-04j/">Aryan Mishra</a>
+&amp; 2021EE10137 &amp; <a
+href="mailto:ee1210137@ee.iitd.ac.in">ee1210137@ee.iitd.ac.in</a> &amp;
+1.0<br />
+</p>
+</div>
+</div>
+<h2 id="subtribes">Subtribes<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<h3 id="documentation">Documentation</h3>
+<div class="center">
+<p><span id="table:Docu1" label="table:Docu1"></span></p>
+<div class="longtable">
+<p><span>| n | e | E | c| </span> <strong>Name</strong> &amp;
+<strong>Entry Number</strong> &amp; <strong>Email ID</strong> &amp;
+<strong>IF</strong><br />
+<a href="https://its-archisman.github.io/My-Website/"><strong>Archisman
+Biswas</strong> </a> &amp; 2021MT10254 &amp; <a
+href="mailto:mt1210254@maths.iitd.ac.in">mt1210254@maths.iitd.ac.in</a>
+&amp; 1.0<br />
+<a href="nan">Asmit Singh</a> &amp; 2021MT10887 &amp; <a
+href="mailto:mt1210887@maths.iitd.ac.in">mt1210887@maths.iitd.ac.in</a>
+&amp; 1.0<br />
+<a href="https://github.com/Musaibgani">Musaib Gani Pirzada</a> &amp;
+2021MT10227 &amp; <a
+href="mailto:mt1210227@maths.iitd.ac.in">mt1210227@maths.iitd.ac.in</a>
+&amp; 1.0<br />
+<a href="https://github.com/2nav">Navneet Raj</a> &amp; 2021MT10240
+&amp; <a
+href="mailto:mt1210240@maths.iitd.ac.in">mt1210240@maths.iitd.ac.in</a>
+&amp; 1.0<br />
+<a href="nan">Neelam Kumari Meena</a> &amp; 2021MT10938 &amp; <a
+href="mailto:mt1210938@maths.iitd.ac.in">mt1210938@maths.iitd.ac.in</a>
+&amp; 1.0<br />
+<a href="nan">Nikhil Choudhary</a> &amp; 2020MT10826 &amp; <a
+href="mailto:mt1200826@maths.iitd.ac.in">mt1200826@maths.iitd.ac.in</a>
+&amp; 0.8<br />
+<a
+href="https://www.linkedin.com/in/purushottam-malviya-9225681bb/">Purushottam
+Malviya</a> &amp; 2020EE10531 &amp; <a
+href="mailto:ee1200531@ee.iitd.ac.in">ee1200531@ee.iitd.ac.in</a> &amp;
+1.0<br />
+<a href="nan">Rahul Bhardwaj</a> &amp; 2020MT60877 &amp; <a
+href="mailto:mt6200877@maths.iitd.ac.in">mt6200877@maths.iitd.ac.in</a>
+&amp; 1.0<br />
+<a href="nan">Saket Kandoi</a> &amp; 2021MT60265 &amp; <a
+href="mailto:mt6210265@maths.iitd.ac.in">mt6210265@maths.iitd.ac.in</a>
+&amp; 0.95<br />
+<a href="Sanjay23Pooniya">Sanjay Pooniya</a> &amp; 2021EE10148 &amp; <a
+href="mailto:ee1210148@ee.iitd.ac.in">ee1210148@ee.iitd.ac.in</a> &amp;
+1.0<br />
+<a
+href="https://www.linkedin.com/in/sanskriti-gautam-1161b6236/">Sanskriti
+Gautam</a> &amp; 2021MT10935 &amp; <a
+href="mailto:mt1210935@maths.iitd.ac.in">mt1210935@maths.iitd.ac.in</a>
+&amp; 0.6<br />
+<a href="nan">Vaibhav Seth</a> &amp; 2021MT10236 &amp; <a
+href="mailto:mt1210236@maths.iitd.ac.in">mt1210236@maths.iitd.ac.in</a>
+&amp; 1.0<br />
+</p>
+</div>
+</div>
+<h3 id="apd">APD<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></h3>
+<div class="center">
+<p><span id="table:APD1" label="table:APD1"></span></p>
+<div class="longtable">
+<p><span>| n | e | E | c| </span> <strong>Name</strong> &amp;
+<strong>Entry Number</strong> &amp; <strong>Email ID</strong> &amp;
+<strong>IF</strong><br />
+<a
+href="aggarwalshubham009@gmail.com/aggarwalshubham009"><strong>Shubham
+Aggarwal</strong> </a> &amp; 2021EE10809 &amp; <a
+href="mailto:ee1210809@ee.iitd.ac.in">ee1210809@ee.iitd.ac.in</a> &amp;
+0.9<br />
+<a
+href="https://www.linkedin.com/in/yash-goel-6ba26322a?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app"><strong>Yash
+Goel</strong></a> &amp; 2021EE10984 &amp; <a
+href="mailto:ee1210984@ee.iitd.ac.in">ee1210984@ee.iitd.ac.in</a> &amp;
+0.9<br />
+<a href="nan">Aditya Jain</a> &amp; 2021EE10633 &amp; <a
+href="mailto:ee1210633@ee.iitd.ac.in">ee1210633@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="https://github.com/Ameya-Mishra">Ameya Mishra</a> &amp;
+2021MT10637 &amp; <a
+href="mailto:mt1210637@maths.iitd.ac.in">mt1210637@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="https://www.linkedin.com/in/anchal-popli-182047225/">Anchal</a>
+&amp; 2021MT10910 &amp; <a
+href="mailto:mt1210910@maths.iitd.ac.in">mt1210910@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="https://www.linkedin.com/in/aniket-abhiraj-357381237/">Aniket
+Abhiraj</a> &amp; 2021EE10676 &amp; <a
+href="mailto:ee1210676@ee.iitd.ac.in">ee1210676@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="lunatic04  ">Aniket Singh</a> &amp; 2021MT10256 &amp; <a
+href="mailto:mt1210256@maths.iitd.ac.in">mt1210256@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="nan">Anshul</a> &amp; 2021EE10729 &amp; <a
+href="mailto:ee1210729@ee.iitd.ac.in">ee1210729@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="nan">Ark Verma</a> &amp; 2021EE10783 &amp; <a
+href="mailto:ee1210783@ee.iitd.ac.in">ee1210783@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="nan">Arnav Goel</a> &amp; 2021EE10699 &amp; <a
+href="mailto:ee1210699@ee.iitd.ac.in">ee1210699@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a
+href="https://www.linkedin.com/in/aryan-gupta-43b283229?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app">Aryan
+Gupta</a> &amp; 2021EE10974 &amp; <a
+href="mailto:ee1210974@ee.iitd.ac.in">ee1210974@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="https://github.com/Dhruv-Kushwaha2010">Dhruv Kushwaha</a> &amp;
+2021MT10235 &amp; <a
+href="mailto:mt1210235@maths.iitd.ac.in">mt1210235@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="https://github.com/Harsh2718">Harsh Agarwal</a> &amp;
+2021EE30977 &amp; <a
+href="mailto:ee3210977@ee.iitd.ac.in">ee3210977@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="nan">Harsh Swaika</a> &amp; 2021EE11052 &amp; <a
+href="mailto:ee1211052@ee.iitd.ac.in">ee1211052@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="nan">Harshit Sachdeva</a> &amp; 2021EE30705 &amp; <a
+href="mailto:ee3210705@ee.iitd.ac.in">ee3210705@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="nan">Harshit Singh</a> &amp; 2021MT10257 &amp; <a
+href="mailto:mt1210257@maths.iitd.ac.in">mt1210257@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="nan">Kaustubh Dev</a> &amp; 2021EE10689 &amp; <a
+href="mailto:ee1210689@ee.iitd.ac.in">ee1210689@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="nan">Khushika Shringi</a> &amp; 2021EE10665 &amp; <a
+href="mailto:ee1210665@ee.iitd.ac.in">ee1210665@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="https://www.linkedin.com/in/khushvind-maurya/">Khushvind
+Maurya</a> &amp; 2021MT10238 &amp; <a
+href="mailto:mt1210238@maths.iitd.ac.in">mt1210238@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="nan">Kinjal Anchhara</a> &amp; 2021MT60959 &amp; <a
+href="mailto:mt6210959@maths.iitd.ac.in">mt6210959@maths.iitd.ac.in</a>
+&amp; 0.8<br />
+<a href="nan">Maithili Joshi</a> &amp; 2021EE10653 &amp; <a
+href="mailto:ee1210653@ee.iitd.ac.in">ee1210653@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="Mohitraj227">Mohit Raj Modi</a> &amp; 2021MT10919 &amp; <a
+href="mailto:mt1210919@maths.iitd.ac.in">mt1210919@maths.iitd.ac.in</a>
+&amp; 0.8<br />
+<a href="mridulahi/MridulAhi">Mridul Ahi</a> &amp; 2021MT10901 &amp; <a
+href="mailto:mt1210901@maths.iitd.ac.in">mt1210901@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="nan">Namay Bedi Verma</a> &amp; 2021MT61051 &amp; <a
+href="mailto:mt6211051@maths.iitd.ac.in">mt6211051@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="nan">Oshin Kavdia</a> &amp; 2021EE10654 &amp; <a
+href="mailto:ee1210654@ee.iitd.ac.in">ee1210654@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="https://www.linkedin.com/in/rohandas1710/">Rohan Das</a> &amp;
+2021EE10621 &amp; <a
+href="mailto:ee1210621@ee.iitd.ac.in">ee1210621@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="nan">Sai Raj Kolisetti</a> &amp; 2021EE10145 &amp; <a
+href="mailto:ee1210145@ee.iitd.ac.in">ee1210145@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a
+href="https://www.linkedin.com/in/sarthak-kumar-singh-a77146245/">Sarthak
+Kumar Singh</a> &amp; 2021EE10673 &amp; <a
+href="mailto:ee1210673@ee.iitd.ac.in">ee1210673@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="5HU8H">Shubh Chhabra</a> &amp; 2021EE10645 &amp; <a
+href="mailto:ee1210645@ee.iitd.ac.in">ee1210645@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="https://github.com/Hello-3585">Abhinav Verma</a> &amp;
+2021EE10978 &amp; <a
+href="mailto:ee1210978@ee.iitd.ac.in">ee1210978@ee.iitd.ac.in</a> &amp;
+1.0<br />
+<a href="Ujjwal233">Ujjwal Yadav</a> &amp; 2021EE10669 &amp; <a
+href="mailto:ee1210669@ee.iitd.ac.in">ee1210669@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="Vishal-495">Vishal Sai Bingi</a> &amp; 2021EE10668 &amp; <a
+href="mailto:ee1210668@ee.iitd.ac.in">ee1210668@ee.iitd.ac.in</a> &amp;
+0.65<br />
+</p>
+<p><a href="https://github.com/crownCTDM">Vasu Sharma</a> &amp;
+2021EE10620 &amp; <a
+href="mailto:ee1210620@ee.iitd.ac.in">ee1210620@ee.iitd.ac.in</a> &amp;
+0.65<br />
+</p>
+</div>
+</div>
+<h3 id="hnd">HND<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a></h3>
+<div class="center">
+<p><span id="table:HND1" label="table:HND1"></span></p>
+<div class="longtable">
+<p><span>| n | e | E | c| </span> <strong>Name</strong> &amp;
+<strong>Entry Number</strong> &amp; <strong>Email ID</strong> &amp;
+<strong>IF</strong><br />
+<a href="https://github.com/joelAKY"><strong>Joel Arun Kumar</strong>
+</a> &amp; 2021EE10159 &amp; <a
+href="mailto:ee1210159@ee.iitd.ac.in">ee1210159@ee.iitd.ac.in</a> &amp;
+1.0<br />
+<a href="Yash089610"><strong>Yash Agarwal</strong></a> &amp; 2021EE10638
+&amp; <a
+href="mailto:ee1210638@ee.iitd.ac.in">ee1210638@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="https://www.linkedin.com/in/abhilasa-das-194413236">Abhilasa
+Das</a> &amp; 2021EE10168 &amp; <a
+href="mailto:ee1210168@ee.iitd.ac.in">ee1210168@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="nan">Aditi Shekhar</a> &amp; 2021EE10685 &amp; <a
+href="mailto:ee1210685@ee.iitd.ac.in">ee1210685@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="https://www.linkedin.com/in/advait-ninawe-7a790022b">Advait
+Rajesh Ninawe</a> &amp; 2021EE30714 &amp; <a
+href="mailto:ee3210714@ee.iitd.ac.in">ee3210714@ee.iitd.ac.in</a> &amp;
+0.6<br />
+<a href="nan">Ayush Kumar</a> &amp; 2021EE10150 &amp; <a
+href="mailto:ee1210150@ee.iitd.ac.in">ee1210150@ee.iitd.ac.in</a> &amp;
+1.0<br />
+<a
+href="https://www.linkedin.com/in/chetan-chaurasia-561b3b228?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app,https://github.com/chetan-chaurasia">Chetan
+Chaurasia</a> &amp; 2021EE10147 &amp; <a
+href="mailto:ee1210147@ee.iitd.ac.in">ee1210147@ee.iitd.ac.in</a> &amp;
+0.68<br />
+<a href="nan">Chirag Gautam</a> &amp; 2021EE10166 &amp; <a
+href="mailto:ee1210166@ee.iitd.ac.in">ee1210166@ee.iitd.ac.in</a> &amp;
+0.68<br />
+<a href="nan">Deepanshu Kumar</a> &amp; 2021EE10696 &amp; <a
+href="mailto:ee1210696@ee.iitd.ac.in">ee1210696@ee.iitd.ac.in</a> &amp;
+0.68<br />
+<a href="lost-strings">Disha Katia</a> &amp; 2021EE10647 &amp; <a
+href="mailto:ee1210647@ee.iitd.ac.in">ee1210647@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="dn09-create">Durgesh Nandini</a> &amp; 2021EE10651 &amp; <a
+href="mailto:ee1210651@ee.iitd.ac.in">ee1210651@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="https://github.com/vulpeex">Eepsita</a> &amp; 2021EE10692 &amp;
+<a href="mailto:ee1210692@ee.iitd.ac.in">ee1210692@ee.iitd.ac.in</a>
+&amp; 0.75<br />
+<a href="nan">Garvit Dhoot</a> &amp; 2021EE30823 &amp; <a
+href="mailto:ee3210823@ee.iitd.ac.in">ee3210823@ee.iitd.ac.in</a> &amp;
+0.6<br />
+<a
+href="https://www.linkedin.com/in/himanshu-prajapati-400669217?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app">Himanshu</a>
+&amp; 2021EE30177 &amp; <a
+href="mailto:ee3210177@ee.iitd.ac.in">ee3210177@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="nan">Rishabh Barola</a> &amp; 2021EE10636 &amp; <a
+href="mailto:ee1210636@ee.iitd.ac.in">ee1210636@ee.iitd.ac.in</a> &amp;
+1.0<br />
+<a href="nan">Kalu Ram Tard</a> &amp; 2021EE10680 &amp; <a
+href="mailto:ee1210680@ee.iitd.ac.in">ee1210680@ee.iitd.ac.in</a> &amp;
+0.875<br />
+<a href="nan">Kartavya Khurana</a> &amp; 2021EE30710 &amp; <a
+href="mailto:ee3210710@ee.iitd.ac.in">ee3210710@ee.iitd.ac.in</a> &amp;
+0.6<br />
+<a
+href="https://www.linkedin.com/in/pooja-mahajan-101b63227?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app">Pooja
+Mahajan</a> &amp; 2021EE10652 &amp; <a
+href="mailto:ee1210652@ee.iitd.ac.in">ee1210652@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="nan">Pramukh Jain</a> &amp; 2021EE10720 &amp; <a
+href="mailto:ee1210720@ee.iitd.ac.in">ee1210720@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="https://github.com/raviparihar0659">Ravi Parihar</a> &amp;
+2021EE10156 &amp; <a
+href="mailto:ee1210156@ee.iitd.ac.in">ee1210156@ee.iitd.ac.in</a> &amp;
+0.805<br />
+<a href="nan">Sheetal Manatawal</a> &amp; 2021EE10174 &amp; <a
+href="mailto:ee1210174@ee.iitd.ac.in">ee1210174@ee.iitd.ac.in</a> &amp;
+0.565<br />
+<a href="https://github.com/shivam-kumar04">Shivam Kumar</a> &amp;
+2021EE10165 &amp; <a
+href="mailto:ee1210165@ee.iitd.ac.in">ee1210165@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="nan">Sudhanshu Raj</a> &amp; 2021EE10132 &amp; <a
+href="mailto:ee1210132@ee.iitd.ac.in">ee1210132@ee.iitd.ac.in</a> &amp;
+0.445<br />
+<a href="https://github.com/tanmaimerugu">Tanmai Merugu</a> &amp;
+2021EE10149 &amp; <a
+href="mailto:ee1210149@ee.iitd.ac.in">ee1210149@ee.iitd.ac.in</a> &amp;
+0.6<br />
+<a href="https://github.com/vikas4vikas">Vikas Meena</a> &amp;
+2021EE10169 &amp; <a
+href="mailto:ee1210169@ee.iitd.ac.in">ee1210169@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="nan">Vinay Sah</a> &amp; 2021EE10171 &amp; <a
+href="mailto:ee1210171@ee.iitd.ac.in">ee1210171@ee.iitd.ac.in</a> &amp;
+0.68<br />
+</p>
+</div>
+</div>
+<h2 id="tribe-members-with-if-less-than-1">Tribe Members with IF less
+than 1</h2>
+<h3 id="documentation-1">Documentation</h3>
+<div class="center">
+<p><span id="Docu2" label="Docu2"></span></p>
+<div class="longtable">
+<p><span>| n | e | E | c| </span> <strong>Name</strong> &amp;
+<strong>Entry Number</strong> &amp; <strong>Email ID</strong> &amp;
+<strong>IF</strong><br />
+<a href="nan">Nikhil Choudhary</a> &amp; 2020MT10826 &amp; <a
+href="mailto:mt1200826@maths.iitd.ac.in">mt1200826@maths.iitd.ac.in</a>
+&amp; 0.8<br />
+<a href="nan">Saket Kandoi</a> &amp; 2021MT60265 &amp; <a
+href="mailto:mt6210265@maths.iitd.ac.in">mt6210265@maths.iitd.ac.in</a>
+&amp; 0.95<br />
+<a
+href="https://www.linkedin.com/in/sanskriti-gautam-1161b6236/">Sanskriti
+Gautam</a> &amp; 2021MT10935 &amp; <a
+href="mailto:mt1210935@maths.iitd.ac.in">mt1210935@maths.iitd.ac.in</a>
+&amp; 0.6<br />
+</p>
+</div>
+</div>
+<h3 id="apd-1">APD</h3>
+<div class="center">
+<p><span id="APD2" label="APD2"></span></p>
+<div class="longtable">
+<p><span>| n | e | E | c| </span> <strong>Name</strong> &amp;
+<strong>Entry Number</strong> &amp; <strong>Email ID</strong> &amp;
+<strong>IF</strong><br />
+<a href="nan">Aditya Jain</a> &amp; 2021EE10633 &amp; <a
+href="mailto:ee1210633@ee.iitd.ac.in">ee1210633@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="https://github.com/Ameya-Mishra">Ameya Mishra</a> &amp;
+2021MT10637 &amp; <a
+href="mailto:mt1210637@maths.iitd.ac.in">mt1210637@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="https://www.linkedin.com/in/anchal-popli-182047225/">Anchal</a>
+&amp; 2021MT10910 &amp; <a
+href="mailto:mt1210910@maths.iitd.ac.in">mt1210910@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="https://www.linkedin.com/in/aniket-abhiraj-357381237/">Aniket
+Abhiraj</a> &amp; 2021EE10676 &amp; <a
+href="mailto:ee1210676@ee.iitd.ac.in">ee1210676@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="lunatic04  ">Aniket Singh</a> &amp; 2021MT10256 &amp; <a
+href="mailto:mt1210256@maths.iitd.ac.in">mt1210256@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="nan">Anshul</a> &amp; 2021EE10729 &amp; <a
+href="mailto:ee1210729@ee.iitd.ac.in">ee1210729@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="nan">Ark Verma</a> &amp; 2021EE10783 &amp; <a
+href="mailto:ee1210783@ee.iitd.ac.in">ee1210783@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="nan">Arnav Goel</a> &amp; 2021EE10699 &amp; <a
+href="mailto:ee1210699@ee.iitd.ac.in">ee1210699@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a
+href="https://www.linkedin.com/in/aryan-gupta-43b283229?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app">Aryan
+Gupta</a> &amp; 2021EE10974 &amp; <a
+href="mailto:ee1210974@ee.iitd.ac.in">ee1210974@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="https://github.com/Dhruv-Kushwaha2010">Dhruv Kushwaha</a> &amp;
+2021MT10235 &amp; <a
+href="mailto:mt1210235@maths.iitd.ac.in">mt1210235@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="https://github.com/Harsh2718">Harsh Agarwal</a> &amp;
+2021EE30977 &amp; <a
+href="mailto:ee3210977@ee.iitd.ac.in">ee3210977@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="nan">Harsh Swaika</a> &amp; 2021EE11052 &amp; <a
+href="mailto:ee1211052@ee.iitd.ac.in">ee1211052@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="nan">Harshit Sachdeva</a> &amp; 2021EE30705 &amp; <a
+href="mailto:ee3210705@ee.iitd.ac.in">ee3210705@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="nan">Harshit Singh</a> &amp; 2021MT10257 &amp; <a
+href="mailto:mt1210257@maths.iitd.ac.in">mt1210257@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="nan">Kaustubh Dev</a> &amp; 2021EE10689 &amp; <a
+href="mailto:ee1210689@ee.iitd.ac.in">ee1210689@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="nan">Khushika Shringi</a> &amp; 2021EE10665 &amp; <a
+href="mailto:ee1210665@ee.iitd.ac.in">ee1210665@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="https://www.linkedin.com/in/khushvind-maurya/">Khushvind
+Maurya</a> &amp; 2021MT10238 &amp; <a
+href="mailto:mt1210238@maths.iitd.ac.in">mt1210238@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="nan">Kinjal Anchhara</a> &amp; 2021MT60959 &amp; <a
+href="mailto:mt6210959@maths.iitd.ac.in">mt6210959@maths.iitd.ac.in</a>
+&amp; 0.8<br />
+<a href="nan">Maithili Joshi</a> &amp; 2021EE10653 &amp; <a
+href="mailto:ee1210653@ee.iitd.ac.in">ee1210653@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="Mohitraj227">Mohit Raj Modi</a> &amp; 2021MT10919 &amp; <a
+href="mailto:mt1210919@maths.iitd.ac.in">mt1210919@maths.iitd.ac.in</a>
+&amp; 0.8<br />
+<a href="mridulahi/MridulAhi">Mridul Ahi</a> &amp; 2021MT10901 &amp; <a
+href="mailto:mt1210901@maths.iitd.ac.in">mt1210901@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="nan">Namay Bedi Verma</a> &amp; 2021MT61051 &amp; <a
+href="mailto:mt6211051@maths.iitd.ac.in">mt6211051@maths.iitd.ac.in</a>
+&amp; 0.65<br />
+<a href="nan">Oshin Kavdia</a> &amp; 2021EE10654 &amp; <a
+href="mailto:ee1210654@ee.iitd.ac.in">ee1210654@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="https://www.linkedin.com/in/rohandas1710/">Rohan Das</a> &amp;
+2021EE10621 &amp; <a
+href="mailto:ee1210621@ee.iitd.ac.in">ee1210621@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="nan">Sai Raj Kolisetti</a> &amp; 2021EE10145 &amp; <a
+href="mailto:ee1210145@ee.iitd.ac.in">ee1210145@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a
+href="https://www.linkedin.com/in/sarthak-kumar-singh-a77146245/">Sarthak
+Kumar Singh</a> &amp; 2021EE10673 &amp; <a
+href="mailto:ee1210673@ee.iitd.ac.in">ee1210673@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="5HU8H">Shubh Chhabra</a> &amp; 2021EE10645 &amp; <a
+href="mailto:ee1210645@ee.iitd.ac.in">ee1210645@ee.iitd.ac.in</a> &amp;
+0.8<br />
+<a href="aggarwalshubham009@gmail.com/aggarwalshubham009">Shubham
+Aggarwal</a> &amp; 2021EE10809 &amp; <a
+href="mailto:ee1210809@ee.iitd.ac.in">ee1210809@ee.iitd.ac.in</a> &amp;
+0.9<br />
+<a href="Ujjwal233">Ujjwal Yadav</a> &amp; 2021EE10669 &amp; <a
+href="mailto:ee1210669@ee.iitd.ac.in">ee1210669@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a href="Vishal-495">Vishal Sai Bingi</a> &amp; 2021EE10668 &amp; <a
+href="mailto:ee1210668@ee.iitd.ac.in">ee1210668@ee.iitd.ac.in</a> &amp;
+0.65<br />
+<a
+href="https://www.linkedin.com/in/yash-goel-6ba26322a?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app">Yash
+Goel</a> &amp; 2021EE10984 &amp; <a
+href="mailto:ee1210984@ee.iitd.ac.in">ee1210984@ee.iitd.ac.in</a> &amp;
+0.9<br />
+<a href="https://github.com/crownCTDM">Vasu Sharma</a> &amp; 2021EE10620
+&amp; <a
+href="mailto:ee1210620@ee.iitd.ac.in">ee1210620@ee.iitd.ac.in</a> &amp;
+0.65<br />
+</p>
+</div>
+</div>
+<h3 id="hnd-1">HND</h3>
+<div class="center">
+<p><span id="HND2" label="HND2"></span></p>
+<div class="longtable">
+<p><span>| n | e | E | c| </span> <strong>Name</strong> &amp;
+<strong>Entry Number</strong> &amp; <strong>Email ID</strong> &amp;
+<strong>IF</strong><br />
+<a href="https://www.linkedin.com/in/abhilasa-das-194413236">Abhilasa
+Das</a> &amp; 2021EE10168 &amp; <a
+href="mailto:ee1210168@ee.iitd.ac.in">ee1210168@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="nan">Aditi Shekhar</a> &amp; 2021EE10685 &amp; <a
+href="mailto:ee1210685@ee.iitd.ac.in">ee1210685@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="https://www.linkedin.com/in/advait-ninawe-7a790022b">Advait
+Rajesh Ninawe</a> &amp; 2021EE30714 &amp; <a
+href="mailto:ee3210714@ee.iitd.ac.in">ee3210714@ee.iitd.ac.in</a> &amp;
+0.6<br />
+<a
+href="https://www.linkedin.com/in/chetan-chaurasia-561b3b228?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app,https://github.com/chetan-chaurasia">Chetan
+Chaurasia</a> &amp; 2021EE10147 &amp; <a
+href="mailto:ee1210147@ee.iitd.ac.in">ee1210147@ee.iitd.ac.in</a> &amp;
+0.68<br />
+<a href="nan">Chirag Gautam</a> &amp; 2021EE10166 &amp; <a
+href="mailto:ee1210166@ee.iitd.ac.in">ee1210166@ee.iitd.ac.in</a> &amp;
+0.68<br />
+<a href="nan">Deepanshu Kumar</a> &amp; 2021EE10696 &amp; <a
+href="mailto:ee1210696@ee.iitd.ac.in">ee1210696@ee.iitd.ac.in</a> &amp;
+0.68<br />
+<a href="lost-strings">Disha Katia</a> &amp; 2021EE10647 &amp; <a
+href="mailto:ee1210647@ee.iitd.ac.in">ee1210647@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="dn09-create">Durgesh Nandini</a> &amp; 2021EE10651 &amp; <a
+href="mailto:ee1210651@ee.iitd.ac.in">ee1210651@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="https://github.com/vulpeex">Eepsita</a> &amp; 2021EE10692 &amp;
+<a href="mailto:ee1210692@ee.iitd.ac.in">ee1210692@ee.iitd.ac.in</a>
+&amp; 0.75<br />
+<a href="nan">Garvit Dhoot</a> &amp; 2021EE30823 &amp; <a
+href="mailto:ee3210823@ee.iitd.ac.in">ee3210823@ee.iitd.ac.in</a> &amp;
+0.6<br />
+<a
+href="https://www.linkedin.com/in/himanshu-prajapati-400669217?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app">Himanshu</a>
+&amp; 2021EE30177 &amp; <a
+href="mailto:ee3210177@ee.iitd.ac.in">ee3210177@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="nan">Kalu Ram Tard</a> &amp; 2021EE10680 &amp; <a
+href="mailto:ee1210680@ee.iitd.ac.in">ee1210680@ee.iitd.ac.in</a> &amp;
+0.875<br />
+<a href="nan">Kartavya Khurana</a> &amp; 2021EE30710 &amp; <a
+href="mailto:ee3210710@ee.iitd.ac.in">ee3210710@ee.iitd.ac.in</a> &amp;
+0.6<br />
+<a
+href="https://www.linkedin.com/in/pooja-mahajan-101b63227?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app">Pooja
+Mahajan</a> &amp; 2021EE10652 &amp; <a
+href="mailto:ee1210652@ee.iitd.ac.in">ee1210652@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="nan">Pramukh Jain</a> &amp; 2021EE10720 &amp; <a
+href="mailto:ee1210720@ee.iitd.ac.in">ee1210720@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="https://github.com/raviparihar0659">Ravi Parihar</a> &amp;
+2021EE10156 &amp; <a
+href="mailto:ee1210156@ee.iitd.ac.in">ee1210156@ee.iitd.ac.in</a> &amp;
+0.805<br />
+<a href="nan">Sheetal Manatawal</a> &amp; 2021EE10174 &amp; <a
+href="mailto:ee1210174@ee.iitd.ac.in">ee1210174@ee.iitd.ac.in</a> &amp;
+0.565<br />
+<a href="https://github.com/shivam-kumar04">Shivam Kumar</a> &amp;
+2021EE10165 &amp; <a
+href="mailto:ee1210165@ee.iitd.ac.in">ee1210165@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="nan">Sudhanshu Raj</a> &amp; 2021EE10132 &amp; <a
+href="mailto:ee1210132@ee.iitd.ac.in">ee1210132@ee.iitd.ac.in</a> &amp;
+0.445<br />
+<a href="https://github.com/tanmaimerugu">Tanmai Merugu</a> &amp;
+2021EE10149 &amp; <a
+href="mailto:ee1210149@ee.iitd.ac.in">ee1210149@ee.iitd.ac.in</a> &amp;
+0.6<br />
+<a href="https://github.com/vikas4vikas">Vikas Meena</a> &amp;
+2021EE10169 &amp; <a
+href="mailto:ee1210169@ee.iitd.ac.in">ee1210169@ee.iitd.ac.in</a> &amp;
+0.75<br />
+<a href="nan">Vinay Sah</a> &amp; 2021EE10171 &amp; <a
+href="mailto:ee1210171@ee.iitd.ac.in">ee1210171@ee.iitd.ac.in</a> &amp;
+0.68<br />
+<a href="Yash089610">Yash Agarwal</a> &amp; 2021EE10638 &amp; <a
+href="mailto:ee1210638@ee.iitd.ac.in">ee1210638@ee.iitd.ac.in</a> &amp;
+0.75<br />
+</p>
+</div>
+</div>
+<p><span><span style="color: white"><span data-acronym-label="IF"
+data-acronym-form="singular+short">IF</span></span></span></p>
+<h2 id="acronyms">Acronyms</h2>
+<div class="acronym">
+
+</div>
+<h2 id="mind-maps">Mind Maps</h2>
+<div class="center">
+<figure>
+<img src="./Files/Images/CoolBUS_Req_Mind_Map.png"
+style="width:80.0%" />
+<figcaption><strong>Mind Map emphasizing the requirements</strong> (Made
+using <em>MindNote</em>)</figcaption>
+</figure>
+</div>
+<div class="center">
+<figure>
+<img src="./Files/Images/CoolBUS_Spec_Mind_Map.png"
+style="width:110.0%" />
+<figcaption><strong>Mind Map emphasizing the Specification</strong>
+(Made using <em>MindNote</em>)</figcaption>
+</figure>
+</div>
+<h2 id="project-management-details">Project Management Details</h2>
+<figure>
+<embed src="./Files/Images/Network.pdf" style="width:110.0%" />
+<figcaption><strong>Network Chart</strong> <span>(Created using
+<em>Project Libre</em>)</span></figcaption>
+</figure>
+<figure>
+<embed src="./Files/Images/WBS.pdf" style="width:110.0%" />
+<figcaption><strong><span data-acronym-label="WBS"
+data-acronym-form="singular+short">WBS</span> Chart</strong>
+<span>(Created using <em>Project Libre</em>)</span></figcaption>
+</figure>
+<figure>
+<embed src="./Files/Images/Gantt.pdf" style="width:110.0%" />
+<figcaption><strong>Gantt Chart</strong> <span>(Created using
+<em>Project Libre</em>)</span></figcaption>
+</figure>
+<figure>
+<figure>
+<embed src="./Files/Images/Resources.pdf" />
+<figcaption aria-hidden="true"></figcaption>
+</figure>
+<figcaption><strong>Resource Breakdown</strong> <span>(Created using
+<em>Project Libre</em>)</span></figcaption>
+</figure>
+<figure>
+<figure>
+<embed src="./Files/Images/Resources.pdf" />
+<figcaption aria-hidden="true"></figcaption>
+</figure>
+<figcaption><strong>Resource Breakdown</strong> <span>(Created using
+<em>Project Libre</em>)</span></figcaption>
+</figure>
+<h2 id="motivation">Motivation</h2>
+<p>The existing bus transit system on campus lacks effectiveness,
+accessibility, and convenience. Uncertain wait times make it challenging
+for passengers to decide whether to wait for the next bus or seek
+alternative transportation. Recognizing this limitation, we are
+developing a solution to address this issue and enhance the convenience
+of the bus transportation system for passengers. We maximise renewable
+energy (in the form of solar energy) usage for this solution to minimise
+any overhead power costs and make a greener solution.</p>
+<h1 id="requirements">Requirements</h1>
+<h2 id="functional-requirements">Functional Requirements</h2>
+<ol>
+<li><p><u><span class="smallcaps">Passenger Wait Times</span></u> :
+Speeding to compensate for delays, even after a passenger waits over a
+minute and notifies the driver, is prohibited. Safety is paramount and
+arrival times may fluctuate accordingly</p></li>
+<li><p><u><span class="smallcaps">Driver Notification</span></u> :
+There’s no obligation to inform the driver if a passenger waits for more
+than a minute. Waiting time is restricted to passenger boarding and
+deboarding</p></li>
+<li><p><u><span class="smallcaps">Bus Full Indicator</span></u> : The
+driver is not obligated to provide information to waiting passengers
+regarding the availability of space</p></li>
+<li><p><u><span class="smallcaps">Road Incidents Update</span></u> :
+When there’s an unexpected delay or a roadblock, the display will flash
+’999’ to signal an emergency</p></li>
+<li><p><u><span class="smallcaps">Feedback Mechanism</span></u> : A
+digital interface could be implemented for users to provide feedback or
+report issues related to bus services</p></li>
+<li><p><u><span class="smallcaps">Automation of Bus Unit
+Operation</span></u> : It needs to be fully automated, manual input from
+the driver or staff for every bus direction change or stop is not
+expected</p></li>
+<li><p><u><span class="smallcaps">Wait Time Interface</span></u> : An
+interface can be devised to allow individuals heading to the bus stop to
+access information regarding the wait time</p></li>
+<li><p><u><span class="smallcaps">Passenger Notification</span></u> :
+Notifying the bus driver about a waiting passenger does not affect the
+bus route, even if the bus is empty</p></li>
+<li><p><u><span class="smallcaps">Empty Bus Stops</span></u> : The bus
+stops at empty bus stop as well, for passenger deboarding</p></li>
+<li><p><u><span class="smallcaps">System Timeline</span></u> : The
+desired timeline for the development, testing, and deployment of the
+system is April 25th, 2025</p></li>
+<li><p><u><span class="smallcaps">Real-Time Tracking</span></u> :
+Real-time tracking of every bus is not required, but it is suggested to
+keep track of location and travel activity logs for around a month. Only
+have to keep a log of arrival and departure times at every bus stop, and
+this activity log is to be stored for the long term. (Can be done at
+appropriate frequency, no need for real time)</p></li>
+<li><p><u><span class="smallcaps">Bus <span data-acronym-label="U-turn"
+data-acronym-form="singular+short">U-turn</span></span></u> : There may
+not be sufficient space at every stop for the bus to make a <em><span
+data-acronym-label="U-turn"
+data-acronym-form="singular+short">U-turn</span></em> and onboard
+passengers on the reverse path. Bus follows its route strictly, does not
+make U-Turns</p></li>
+<li><p><u><span class="smallcaps">Accessibility Priority</span></u> :
+Prioritizing full accessibility for all campus residents on the bus
+service is not necessary</p></li>
+<li><p><u><span class="smallcaps">Location Exchange</span></u> : There’s
+no need for each bus to be informed about the location of other
+buses</p></li>
+<li><p><u><span class="smallcaps">Early Departure</span></u> : Buses
+should not depart early, even if passengers have been waiting for over a
+minute, as it can confuse passengers and cause inconvenience</p></li>
+<li><p><u><span class="smallcaps">Stop Wait Time</span></u> : Buses
+typically aim to depart from each stop promptly after passengers have
+finished boarding and alighting</p></li>
+<li><p><u><span class="smallcaps">Arrival and Departure
+Logging</span></u> : The logging of bus arrival and departure must be
+automatic and cannot rely on manual input, ensuring accuracy and
+efficiency in tracking bus movements</p></li>
+<li><p><u><span class="smallcaps">Centralized Management</span></u> :
+The bus service is centrally managed, with everything logged. While
+there’s no real-time monitoring, logs are available for review</p></li>
+<li><p><u><span class="smallcaps">Passenger Drop-off
+Notification</span></u> : There is no notification received when a
+passenger enters the bus regarding their drop-off</p></li>
+<li><p><u><span class="smallcaps">Bus Bypass Protocol</span></u> : If
+the bus is already full, the driver does not need to stop the bus at
+every subsequent stop</p></li>
+<li><p><u><span class="smallcaps">Connectivity Focus</span></u>
+:Connectivity is exclusively between buses and stops, with no direct
+communication link to passengers</p></li>
+<li><p><u><span class="smallcaps">Capacity Information</span></u> : It
+is unnecessary to display a bus’s full status at upcoming stops, as
+passengers may alight at any point, which remains unpredictable to the
+driver</p></li>
+<li><p><u><span class="smallcaps">Emergency Stops</span></u> : In
+emergency situations, like a passenger feeling nauseous, the bus will
+make unscheduled stops between designated stops to address the issue and
+prioritizing passenger safety and well-being</p></li>
+<li><p><u><span class="smallcaps">Waiting Passengers</span></u> : The
+system should distinguish between transient presence and waiting
+passengers standing up to 5 feet from the bus stop pole for more than 30
+seconds. Any passerby standing for 0.5 minutes would qualify them as a
+potential passenger, this wrong identification is allowed</p></li>
+<li><p><u><span class="smallcaps">Following Route</span></u> : Route to
+be followed and stops to be made should be a fully automated
+decision</p></li>
+<li><p><u><span class="smallcaps">Location of Waiting
+Passengers</span></u> : The passenger can be waiting anywhere along the
+route, not necessarily at the next bus stop</p></li>
+<li><p><u><span class="smallcaps">Account for Delays</span></u>:
+Assuming the bus may not always reach X at 8 AM sharp to start the
+shift</p></li>
+</ol>
+<h2 id="logistical-requirements">Logistical Requirements</h2>
+<ol>
+<li><p><u><span class="smallcaps">Stop Limits</span></u> : The number of
+stops allowed between origin and destination is predetermined by the
+institute’s system</p></li>
+<li><p><u><span class="smallcaps">Stop Distribution</span></u> : The
+spacing between stops is not consistent and needs to be surveyed for
+accurate measurement</p></li>
+<li><p><u><span class="smallcaps">Bus Operation</span></u> : If the
+number of passengers at the starting station exceeds the capacity of one
+bus, two buses can be operated simultaneously</p></li>
+<li><p><u><span class="smallcaps">Bus Deployment</span></u> : At the
+moment, there are only 2 buses available. The design needs to consider
+scalability aspects to accommodate demand fluctuations</p></li>
+<li><p><u><span class="smallcaps">Bus Speed</span></u> : Bus speed can
+vary depending on the amount of traffic, the number of passenger stops,
+the time of day, the weather, and the quality of the road</p></li>
+<li><p><u><span class="smallcaps">Alternative Transportation</span></u>
+: No alternative transportation options are readily accessible to
+users</p></li>
+<li><p><u><span class="smallcaps">Design Scalability</span></u> : When
+designing the architecture, the primary scalability considerations to
+focus on are the number of buses and the number of stations</p></li>
+</ol>
+<h2 id="interface-requirements">Interface Requirements</h2>
+<ol>
+<li><p><u><span class="smallcaps">Display Method</span></u> : Use of an
+<em><span data-acronym-label="LED dot matrix display"
+data-acronym-form="singular+short">LED dot matrix
+display</span></em><span><span style="color: white"><span
+data-acronym-label="LED"
+data-acronym-form="singular+short">LED</span></span></span></p></li>
+<li><p><u><span class="smallcaps">Accuracy</span></u> :The reading on
+the display must be accurate to ±1 minute</p></li>
+<li><p><u><span class="smallcaps">Duration Of Activity</span></u> : Must
+remain active only between 0700 to 1930 hours, powering on/off should be
+automated</p></li>
+<li><p><u><span class="smallcaps">Display Mounting</span></u> : Secure
+mounting to prevent theft. Mechanical fixation at unreachable
+height</p></li>
+<li><p><u><span class="smallcaps">Accessibility for Visually
+Impaired</span></u> : Utilize <span data-acronym-label="PWM"
+data-acronym-form="singular+short">PWM</span> output or speech IC for
+accessibility</p></li>
+<li><p><u><span class="smallcaps">Syncing Capacity</span></u> : Not
+necessary for synchronization</p></li>
+<li><p><u><span class="smallcaps">Budget Constraints</span></u> : To be
+Made as cost-efficient as possible</p></li>
+<li><p><u><span class="smallcaps">Passenger Input</span></u> : Prefer
+sensor-based input</p></li>
+<li><p><u><span class="smallcaps">Audio Announcement</span></u> :
+Consider installing an <em><span data-acronym-label="audio unit"
+data-acronym-form="singular+short">audio unit</span></em></p></li>
+<li><p><u><span class="smallcaps"><span data-acronym-label="BUk"
+data-acronym-form="singular+short">BUk</span> Functionality</span></u> :
+No display on <span data-acronym-label="BUk"
+data-acronym-form="singular+short">BUk</span>, includes some visual
+confirmation LEDs</p></li>
+<li><p><u><span class="smallcaps">Passenger Waiting
+Notification</span></u> : Separate indicator integrated into
+BUk</p></li>
+<li><p><u><span class="smallcaps">Error Indicator</span></u> : The
+Display would read ‘999’ to indicate emergency or unforeseen
+delays</p></li>
+<li><p><u><span class="smallcaps">Feedback System</span></u> : Are there
+any means for taking feedback from the users or for reporting issues
+related to bus services?</p></li>
+<li><p><u><span class="smallcaps">Resilient</span></u> : Display is
+exposed to all Delhi weather conditions</p></li>
+</ol>
+<h2 id="readability-requirements">Readability Requirements</h2>
+<ol>
+<li><p><u><span class="smallcaps">Base Visibility</span></u> : Must be
+readable from any point by a person with <em><span
+data-acronym-label="6/6 vision" data-acronym-form="singular+short">6/6
+vision</span></em> standing at upto 8 feet in front of the bus
+stop</p></li>
+<li><p><u><span class="smallcaps">Visibility in Varied
+Weather</span></u> : Clarification on visibility criteria under
+different weather conditions. Consideration of weather factors in New
+Delhi, including <em><span data-acronym-label="smog"
+data-acronym-form="singular+short">smog</span></em> and rain</p></li>
+<li><p><u><span class="smallcaps">Performance Metrics</span></u> :
+Identification of specific performance metrics. Proposal to use start
+times, stop arrival/departure times, and out-of-service durations for
+evaluation</p></li>
+</ol>
+<h2 id="power-requirements">Power Requirements</h2>
+<ol>
+<li><p><u><span class="smallcaps">Power Supply</span></u> : Display Unit
+must be battery-powered. Solar power to be used. It cannot be delivered
+directly to the <em><span data-acronym-label="embedded system"
+data-acronym-form="singular+short">embedded system</span></em></p></li>
+<li><p><u><span class="smallcaps">Alternative Power</span></u> : Solar
+energy reliability in peak Delhi winter. Suggestions for backup power
+sources such as larger batteries or panels. Consensus needed on
+procurement across stakeholders</p></li>
+<li><p><u><span class="smallcaps">Connection Details</span></u> :<br />
+Solar Panel<span class="math inline">→</span> AC/<span
+data-acronym-label="DC" data-acronym-form="singular+short">DC</span>
+converter <span class="math inline">→</span> capacitor <span
+class="math inline">→</span> <span data-acronym-label="embedded system"
+data-acronym-form="singular+short">embedded system</span><br />
+<br />
+Solar Panel <span class="math inline">→</span> <span
+data-acronym-label="PWM converter"
+data-acronym-form="singular+short">PWM converter</span> (or <span
+data-acronym-label="MPPT converter"
+data-acronym-form="singular+short">MPPT converter</span>) <span
+class="math inline">→</span> <span data-acronym-label="USB"
+data-acronym-form="singular+short">USB</span> <span
+class="math inline">→</span> <span data-acronym-label="embedded system"
+data-acronym-form="singular+short">embedded system</span><span><span
+style="color: white"><span data-acronym-label="MPPT"
+data-acronym-form="singular+short">MPPT</span></span></span></p></li>
+<li><p><u><span class="smallcaps">Location of Source of Solar
+Power</span></u> :Must be installed at a nearby sunny point and directed
+to nearby bus stop</p></li>
+</ol>
+<h2 id="maintenance-requirements">Maintenance Requirements</h2>
+<ol>
+<li><p><u><span class="smallcaps">Maintenance Feasibility</span></u> :
+Human resources are available for daily maintenance of the stops, making
+monthly maintenance feasible</p></li>
+<li><p><u><span class="smallcaps">Technical Support</span></u> : While
+the system is designed for minimal human intervention, technical support
+is available on an as-needed basis to address any technical issues that
+may arise</p></li>
+<li><p><u><span class="smallcaps">Bus Maintenance</span></u> : Bus type
+(electric or not) is not relevant .bus will be labeled as "Out of
+Service" during refueling, washing, and other maintenance issues.
+Maintenance checks to be carried out on a daily basis</p></li>
+<li><p><u><span class="smallcaps">Display Malfunction</span></u> : In
+the event of an unforeseen malfunction in the display unit, a <em><span
+data-acronym-label="stall period"
+data-acronym-form="singular+short">stall period</span></em> of 1 hour
+will be allowed to fix the issue</p></li>
+<li><p><u><span class="smallcaps">Daily Updates</span></u> : Service is
+under the Transport Section which needs certain data to be provided on a
+daily basis</p></li>
+</ol>
+<h1 id="specifications">Specifications</h1>
+<h2 id="backend-architecture-specifications">Backend Architecture
+Specifications</h2>
+<ul>
+<li><p>There are <span class="math inline"><em>n</em></span> buses:
+<span class="math inline">0, 1, 2, …<em>n</em> − 1</span></p></li>
+<li><p>There are <span class="math inline"><em>m</em></span> stops:
+<span class="math inline">0, 1, 2, …<em>m</em> − 1</span> (<span
+class="math inline">0</span>: first stop, <span
+class="math inline"><em>m</em> − 1</span>: last stop)</p></li>
+<li><p>We have to synchronize the <em><span
+data-acronym-label="24-hour clock"
+data-acronym-form="singular+short">24-hour clock</span></em> at each
+stop</p></li>
+<li><p>In this system, all bus shifts end at the starting stop, i.e. the
+bus shift ends when the bus is back at the <span
+class="math inline">0</span><sup>th</sup> stop. The sequence followed in
+a shift is<br />
+<span><strong><span class="math inline">0</span> <span
+class="math inline">→</span> <span class="math inline">1</span> <span
+class="math inline">→</span> <span class="math inline">2</span> <span
+class="math inline">→</span> <span class="math inline">3</span> <span
+class="math inline">→</span> …<span class="math inline">→</span> <span
+class="math inline"><em>m</em> − 2</span> <span
+class="math inline">→</span> <span
+class="math inline"><em>m</em> − 1</span> <span
+class="math inline">→</span> <span
+class="math inline"><em>m</em> − 2</span> <span
+class="math inline">→</span> …<span class="math inline">→</span> <span
+class="math inline">3</span> <span class="math inline">→</span> <span
+class="math inline">2</span> <span class="math inline">→</span> <span
+class="math inline">1</span> <span class="math inline">→</span> <span
+class="math inline">0</span></strong></span><br />
+</p></li>
+</ul>
+<figure>
+<img src="./Files/Images/Flowchart.png" style="width:70.0%" />
+<figcaption><strong>Example route for m = 4</strong></figcaption>
+</figure>
+<ul>
+<li><p>All these stops will be connected to the institute’s WiFi
+service, which will be used to transmit relevant information to all the
+stops</p></li>
+<li><p>⁠ We use WiFi even when the ESP32 has the option of BLE
+because:</p>
+<ul>
+<li><p>BLEs indoor range is around 100 m, but outdoors the signals are
+attenuated and therefore the range reduces</p></li>
+<li><p>We need to cover a route of approximately 2 km using 4 bus units.
+Therefore using BLE is not feasible unless we can have bus stops every
+50-100 metres, which seems impractical.</p></li>
+</ul></li>
+</ul>
+<h3 id="data-storage-and-timing-estimates">Data Storage and Timing
+Estimates</h3>
+<h4 id="over-the-network">Over the Network</h4>
+<ol>
+<li><p>Maintain the <strong>Arrival</strong><sub>mxn</sub> matrix :
+Element <span class="math inline">(<em>i</em>,<em>j</em>)</span> stores
+the arrival time of <span
+class="math inline"><em>j</em></span><sup>th</sup> bus at the <span
+class="math inline"><em>i</em></span><sup>th</sup> stop</p></li>
+<li><p>Maintain the <strong>Departure</strong><sub>mxn</sub> matrix :
+Element <span class="math inline">(<em>i</em>,<em>j</em>)</span> stores
+the departure time of <span
+class="math inline"><em>j</em></span><sup>th</sup> bus at the <span
+class="math inline"><em>i</em></span><sup>th</sup> stop</p></li>
+<li><p>Maintain the
+<strong>PassengerWaitingAtStop</strong><sub>1xm</sub> matrix : Element
+<span class="math inline">(0,<em>j</em>)</span> is <span
+class="math inline"><em>x</em></span> where <span
+class="math display">$$x = \begin{cases} \mbox{1} &amp; \mbox{if any
+passenger is waiting at the j\textsuperscript{th} stop}  \\ \mbox{0}
+&amp; \mbox{otherwise} \end{cases}$$</span></p></li>
+<li><p>Maintain the <strong>Direction</strong><sub>1xn</sub> matrix :
+Element (0, j) is x where <span class="math display">$$x = \begin{cases}
+\mbox{0} &amp; \mbox{if $j$\textsuperscript{th} bus is moving towards
+$0$\textsuperscript{th} stop}  \\ \mbox{1} &amp; \mbox{if
+$j$\textsuperscript{th} bus is moving towards $m-1$\textsuperscript{th}
+stop} \end{cases}$$</span></p></li>
+</ol>
+<h4 id="locally">Locally</h4>
+<ol>
+<li><p>Maintain the <strong>Scheduled</strong><sub>mxn</sub> matrix:
+Element <span class="math inline">(<em>i</em>,<em>j</em>)</span> stores
+the scheduled time of the <span
+class="math inline"><em>j</em></span><sup>th</sup> bus at the <span
+class="math inline"><em>i</em></span><sup>th</sup> stop</p></li>
+<li><p>Maintain the <strong>Estimated</strong><sub>mxn</sub> matrix:
+Element <span class="math inline">(<em>i</em>,<em>j</em>)</span> stores
+the estimated time of the <span
+class="math inline"><em>j</em></span><sup>th</sup> bus at the <span
+class="math inline"><em>i</em></span><sup>th</sup> stop</p></li>
+<li><p>These matrices can be stored for estimation of arrival times, the
+passenger waiting functionality</p></li>
+<li><p><strong>Connection of Bus Units with Stop Units:</strong></p>
+<ul>
+<li><p>Make the Stop Unit switch to the Bus Unit Wifi when available-
+this method will use more power</p></li>
+<li><p>BLE based connection between Bus and Stop Units- this method will
+be more power efficient but will involve 2 signals on the same antenna,
+which might lead to unexpected latencies and data losses</p></li>
+</ul>
+<p>This mechanism will be finalised only after availability of the
+hardware, after testing it in our conditions.</p></li>
+<li><p>For sensing whether the bus has stopped or not, we are using
+<em><span data-acronym-label="accelerometer"
+data-acronym-form="singular+short">accelerometer</span></em>
+reading.</p></li>
+<li><p>When <span class="math inline"><em>j</em></span><sup>th</sup> bus
+arrives at the <span class="math inline"><em>i</em></span><sup>th</sup>
+stop: <span
+class="math inline">(<em>i</em>,<em>j</em>)</span><sup>th</sup> element
+of the <strong>Arrival</strong> matrix is updated. Bus stop ‘<span
+class="math inline"><em>i</em></span>’ acts as the server, and all other
+bus stops act as clients</p></li>
+<li><p>When <span class="math inline"><em>j</em></span><sup>th</sup> bus
+departs the <span class="math inline"><em>i</em></span><sup>th</sup>
+stop: <span
+class="math inline">(<em>i</em>,<em>j</em>)</span><sup>th</sup> element
+of the <strong>Departure</strong> matrix is updated. All arrival times
+of <span class="math inline"><em>j</em></span><sup>th</sup> column are
+updated to new estimate times based on average time between stops and
+departure time from <span
+class="math inline"><em>i</em></span><sup>th</sup> stop</p></li>
+<li><p><strong>Bus stop nodes that can access this matrix</strong> (i.e.
+nodes that are connected to the network):</p>
+<ul>
+<li><p>Arrival time of next bus at <span
+class="math inline"><em>i</em></span><sup>th</sup> stop= min{<span
+class="math inline"><em>i</em></span><sup>th</sup> row}</p></li>
+<li><p>Suppose that <span class="math inline"><em>j</em></span> the next
+bus arriving at <span class="math inline"><em>i</em></span><sup>th</sup>
+stop <span class="math inline"> = <em>j</em></span></p></li>
+<li><p>Direction of next bus <span
+class="math inline"> = <em>j</em></span><sup>th</sup> element of
+<strong>Direction</strong> matrix</p></li>
+<li><p>Both Arrival time and Direction of buses needs to be communicated
+to the commuters</p></li>
+</ul></li>
+<li><p><strong>Bus stop nodes that cannot access this matrix</strong>
+(i.e. nodes that unexpectedly get disconnected):</p>
+<ul>
+<li><p>Arrival times of each bus estimated using scheduled time and last
+known whereabouts of buses:<br />
+Estimated time = Scheduled time + (last known deviation from scheduled
+time)</p></li>
+<li><p>If estimated time shows a large deviation from scheduled time, we
+will use scheduled time instead of estimated time</p></li>
+<li><p>Direction matrix can be updated based on these estimates:
+Direction of <span class="math inline"><em>j</em></span><sup>th</sup>
+bus switches when arrival time of stop <span
+class="math inline"><em>m</em> − 1</span> is crossed</p></li>
+<li><p>Similar to the previous case, both Arrival time and Direction of
+buses needs to be communicated to the commuters</p></li>
+</ul></li>
+<li><p><strong>When the bus reaches stop <strong><span
+class="math inline">0</span></strong> after a <em><span
+data-acronym-label="round trip" data-acronym-form="singular+short">round
+trip</span></em></strong>:</p>
+<ul>
+<li><p>The <strong>Arrival</strong> and <strong>Departure</strong>
+matrices are updated to actual/estimated arrival and departure values,
+and this can be used to keep log of actual arrival and departure times
+in the system</p></li>
+<li><p>Moving average of previous runs can be used to refine
+predictions</p></li>
+<li><p>After uploading these times, we reset <strong>Arrival</strong>
+and <strong>Departure</strong> matrices to scheduled times</p></li>
+</ul></li>
+<li><p><strong>Storing arrival and departure data of buses:</strong></p>
+<ul>
+<li><p>We have a flash drive in one of the bus units, and all
+information is ultimately stored in that unit. It can be retrieved when
+required from the bus unit (manually) by the transport
+department</p></li>
+<li><p>We get the permission to upload all this data on transport
+department’s disk on IITD server.</p></li>
+</ul>
+<p>Since the data is not much and also not very important to store over
+a long period of time, we purge the data every 2 weeks. These mechanisms
+will be finalised later, only after analysing the hardware
+available to us.</p></li>
+<li><p><strong>For more frequent time updates:</strong></p>
+<ul>
+<li><p>We can specify some locations (using <em><span
+data-acronym-label="GPS"
+data-acronym-form="singular+short">GPS</span></em>) where <em><span
+data-acronym-label="Wi-Fi"
+data-acronym-form="singular+short">Wi-Fi</span></em> is available on the
+route and send quick location updates to the network <span><span
+style="color: white"><span data-acronym-label="Wi-Fi"
+data-acronym-form="singular+short">Wi-Fi</span></span></span></p></li>
+<li><p>These locations can be used as pseudo-stops, where the Bus Unit
+directly informs all Bus Stop nodes its location which can be further
+used to refine time predictions</p></li>
+</ul></li>
+</ol>
+<h3 id="passenger-waiting-problem">Passenger waiting problem</h3>
+<ol>
+<li><p>We can use an <em><span data-acronym-label="ultrasonic sensor"
+data-acronym-form="singular+short">ultrasonic sensor</span></em> at each
+stop to detect any passenger standing within 5 feet of the bus stop. If
+the sensor detects an obstacle within 5 feet for more than 30 seconds,
+then the (0, j)<sup>th</sup> entry of
+<strong>PassengerWaitingAtStop</strong><sub>1xm</sub> matrix is
+updated</p></li>
+<li><p>The bus unit stores a variable <strong>PassengerWaiting</strong>
+where<br />
+<strong>PassengerWaiting</strong> = OR(all elements of
+<strong>PassengerWaitingAtStop</strong>)</p></li>
+<li><p>This variable can be updated at every stop/pseudo stop</p></li>
+</ol>
+<h2 id="frontend-specifications">Frontend Specifications</h2>
+<h3 id="display-unit">Display Unit</h3>
+<ol>
+<li><p>These units will be mounted at every bus stop</p></li>
+<li><p>This unit will tell the time left for the buses from both
+direction to arrive at the station using the <em><span
+data-acronym-label="sliding text animation"
+data-acronym-form="singular+short">sliding text
+animation</span></em></p></li>
+<li><p>There will be one display unit per bus stop. Directional
+information will be displayed on the unit for buses from both
+directions</p></li>
+<li><p>When the units cannot connect to network, the time of arrival
+will be an extrapolation of the past arrival time data. The time of
+arrival will blink telling the maintenance staff that the unit is not
+connected to the network, but for the normal people it will be just the
+time of arrival</p></li>
+<li><p>The display unit will be solar power. This is the connection to
+be followed:<br />
+Solar Panel<span class="math inline">→</span> AC/DC converter <span
+class="math inline">→</span> capacitor <span
+class="math inline">→</span> Embedded system<br />
+<br />
+Solar Panel <span class="math inline">→</span> <span
+data-acronym-label="PWM converter"
+data-acronym-form="singular+short">PWM converter</span> (or <span
+data-acronym-label="MPPT converter"
+data-acronym-form="singular+short">MPPT converter</span>) <span
+class="math inline">→</span> <span data-acronym-label="USB"
+data-acronym-form="singular+short">USB</span> <span
+class="math inline">→</span> Embedded Systems</p></li>
+</ol>
+<h3 id="bus-mounted-units">Bus Mounted Units</h3>
+<ol>
+<li><p>Every bus will have a unit (BUk for the <span
+class="math inline"><em>k</em><sup><em>t</em><em>h</em></sup></span>
+bus)</p></li>
+<li><p>The units will be powered from the battery of the bus</p></li>
+<li><p>While the bus is moving, these units will never be turned
+OFF</p></li>
+<li><p>These units will contain <em><span
+data-acronym-label="accelerometer"
+data-acronym-form="singular+short">accelerometer</span></em> (to
+determine the state of the bus whether it is moving or not)</p></li>
+<li><p>These units will also contain a RED switch, when pressed it will
+signal the system that the bus is OUT OF SERVICE</p></li>
+</ol>
+<h2 id="cost-specifications">Cost Specifications</h2>
+<h3 id="bus-stop-unit">Bus Stop Unit</h3>
+<p>The individual components are as follows:</p>
+<div id="tab:my_label">
+<table>
+<caption>Bus Stop Unit Components</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Component</strong></th>
+<th style="text-align: center;"><strong>Cost</strong></th>
+<th style="text-align: center;"><strong>Source</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Solar Charge Controller</td>
+<td style="text-align: center;"><strong>Rs. 150</strong></td>
+<td style="text-align: center;"><span class="citation"
+data-cites="prabha"></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10W/12V Solar Panel</td>
+<td style="text-align: center;"><strong>Rs. 890</strong></td>
+<td style="text-align: center;"><span class="citation"
+data-cites="premium"></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ESP32 Development Board with Wifi and
+Bluetooth</td>
+<td style="text-align: center;"><strong>Rs. 345</strong></td>
+<td style="text-align: center;"><span class="citation"
+data-cites="esp32"></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ultrasonic Distance Sensor Module -
+HC-SR04</td>
+<td style="text-align: center;"><strong>Rs. 49</strong></td>
+<td style="text-align: center;"><span class="citation"
+data-cites="ultrasonic"></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2 Way Rectangular Sintex Pole Junction
+Box</td>
+<td style="text-align: center;"><strong>Rs. 270</strong></td>
+<td style="text-align: center;"><span class="citation"
+data-cites="sintex"></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">MAX7219 8 LED Dot Matrix Display Module
+ 3</td>
+<td style="text-align: center;"><strong>Rs. 119</strong></td>
+<td style="text-align: center;"><span class="citation"
+data-cites="max7219"></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5mm LED - White Color</td>
+<td style="text-align: center;"><strong>Rs. 2</strong></td>
+<td style="text-align: center;"><span class="citation"
+data-cites="a5mm"></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Total Cost for each Bus Stop Unit: Sum of individual components =
+<strong>Rs. 2061</strong></p>
+<h3 id="bus-unit">Bus Unit</h3>
+<p>The individual components are as follows</p>
+<div id="tab:my_label">
+<table>
+<caption>Bus Stop Unit Components</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Component</strong></th>
+<th style="text-align: center;"><strong>Cost</strong></th>
+<th style="text-align: center;"><strong>Source</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">ESP32 Development Board with Wifi and
+Bluetooth</td>
+<td style="text-align: center;"><strong>Rs. 345</strong></td>
+<td style="text-align: center;"><span class="citation"
+data-cites="esp32"></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5mm Bi-color LED Red Green 3 Pin -
+Common Anode</td>
+<td style="text-align: center;"><strong>Rs. 3</strong></td>
+<td style="text-align: center;"><span class="citation"
+data-cites="max7219"></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5mm LED - White Color</td>
+<td style="text-align: center;"><strong>Rs. 2</strong></td>
+<td style="text-align: center;"><span class="citation"
+data-cites="a5mm"></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">MPU6050 Gyroscope/Accelerometer
+Sensor</td>
+<td style="text-align: center;"><strong>Rs. 99</strong></td>
+<td style="text-align: center;"><span class="citation"
+data-cites="MPU6050"></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Total Cost for each Bus Unit: Sum of individual components =
+<strong>Rs. 449</strong></p>
+<h2 id="manpower-specifications">Manpower Specifications</h2>
+<h3 id="man-hours">Man Hours</h3>
+<div class="center">
+<p><span id="table:man_hours" label="table:man_hours"></span></p>
+<div class="longtable">
+<p><span> | c | e | c | c| </span> &amp; &amp; &amp; <strong>Man
+Hours</strong><br />
+&amp; &amp; &amp; <strong>(in hrs)</strong><br />
+Navneet Raj &amp; 2021MT10240 &amp; Documentation &amp; 10.0<br />
+Sanjay Pooniya &amp; 2021EE10148 &amp; Documentation &amp; 3.0<br />
+Ayush Gupta &amp; 2021MT10697 &amp; Documentation &amp; 4.0<br />
+Asmit Singh &amp; 2021MT10887 &amp; Documentation &amp; 5.0<br />
+Harsh Agarwal &amp; 2021EE30977 &amp; Research &amp; 4.0<br />
+Abhinav Verma &amp; 2021EE10978 &amp; Research &amp; 10.0<br />
+Khushika Shringi &amp; 2021EE10665 &amp; Research &amp; 10.0<br />
+Yash Goel &amp; 2021EE10984 &amp; Research &amp; 9.0<br />
+Aryan Gupta &amp; 2021EE10974 &amp; Research &amp; 9.0<br />
+Aniket Singh &amp; 2021MT10256 &amp; Research &amp; 3.0<br />
+2021ee10653 &amp; 2021EE10653 &amp; Research &amp; 5.0<br />
+Mridul Ahi &amp; 2021MT10901 &amp; Research &amp; 1.0<br />
+Eepsita &amp; 2021EE10692 &amp; Research &amp; 7.0<br />
+Pooja Mahajan &amp; 2021EE10652 &amp; Research &amp; 9.0<br />
+Chetan Chaurasia &amp; 2021EE10147 &amp; Research &amp; 6.0<br />
+Vikas Meena &amp; 2021EE10169 &amp; Research &amp; 4.0<br />
+Anshul &amp; 2021EE10729 &amp; Research &amp; 5.0<br />
+Ark Verma &amp; 2021EE10783 &amp; Research &amp; 10.0<br />
+Yash Agarwal &amp; 2021EE10638 &amp; Research &amp; 8.0<br />
+Sheetal Manatawal &amp; 2021EE10174 &amp; Research &amp; 5.0<br />
+Disha Katia &amp; 2021EE10647 &amp; Research &amp; 6.5<br />
+Chirag Gautam &amp; 2021EE10166 &amp; Research &amp; 4.0<br />
+Shubham Aggarwal &amp; 2021EE10809 &amp; Research &amp; 8.0<br />
+Mohit Raj &amp; 2021MT10919 &amp; Research &amp; 5.0<br />
+Ujjwal Yadav &amp; 2021EE10669 &amp; Research &amp; 8.0<br />
+Aniket Abhiraj &amp; 2021EE10676 &amp; Research &amp; 9.0<br />
+Sarthak Kumar Singh &amp; 2021EE10673 &amp; Research &amp; 8.0<br />
+Aditi Shekhar &amp; 2021EE10685 &amp; Research &amp; 6.0<br />
+Anchal &amp; 2021MT10910 &amp; Research &amp; 8.0<br />
+Rohan Das &amp; 2021EE10621 &amp; Research &amp; 7.0<br />
+Rohan Das &amp; 2021EE10621 &amp; Research &amp; 7.0<br />
+Harsh Swaika &amp; 2021EE11052 &amp; Research &amp; 4.0<br />
+Aditya Jain &amp; 2021EE10633 &amp; Research &amp; 7.0<br />
+Harshit Sachdeva &amp; 2021EE30705 &amp; Research &amp; 7.0<br />
+Kinjal Anchhara &amp; 2021MT60959 &amp; Research &amp; 8.0<br />
+Dhruv Kushwaha &amp; 2021MT10235 &amp; Research &amp; 6.0<br />
+Shubh Chhabra &amp; 2021EE10645 &amp; Research &amp; 8.0<br />
+Rishabh Barola &amp; 2021EE10636 &amp; Research &amp; 5.0<br />
+Pramukh Jain &amp; 2021EE10720 &amp; Research &amp; 6.0<br />
+Oshin Kavdia &amp; 2021EE10654 &amp; Research &amp; 4.0<br />
+Kalu Ram Tard &amp; 2021EE10680 &amp; Research &amp; 8.0<br />
+Joel Arun Kumar Yenubotula &amp; 2021EE10159 &amp; Research &amp;
+5.0<br />
+Ameya Mishra &amp; 2021MT10637 &amp; Research &amp; 9.0<br />
+Tanmai Merugu &amp; 2021EE10149 &amp; Research &amp; 8.0<br />
+Khushvind Maurya &amp; 2021MT10238 &amp; Research &amp; 3.5<br />
+Vinay Sah &amp; 2021EE10171 &amp; Research &amp; 3.0<br />
+Vasu Sharma &amp; 2021EE10620 &amp; Research &amp; 9.0<br />
+Shivam Kumar &amp; 2021EE10165 &amp; Research &amp; 4.0<br />
+Deepanshu Kumar &amp; 2021EE10696 &amp; Research &amp; 4.0<br />
+Durgesh Nandini &amp; 2021EE10651 &amp; Research &amp; 8.0<br />
+Kaustubh Dev &amp; 2021EE10689 &amp; Research &amp; 8.0<br />
+Arnav Goel &amp; 2021EE10699 &amp; Research &amp; 7.0<br />
+Ayush Kumar &amp; 2021EE10150 &amp; Research &amp; 5.0<br />
+Bingi Sai Vishal &amp; 2021EE10668 &amp; Research &amp; 6.0<br />
+Abhilasa Das &amp; 2021EE10168 &amp; Research &amp; 8.0<br />
+Ravi Parihar &amp; 2021EE10156 &amp; Research &amp; 4.0<br />
+Himanshu Prajapati &amp; 2021EE30177 &amp; Research &amp; 4.0<br />
+Aryan Mishra &amp; 2021EE10137 &amp; Research &amp; 10.0<br />
+</p>
+</div>
+</div>
+<h3 id="skillsets-acquired">Skillsets Acquired</h3>
+<div class="center">
+<p><span id="table:skillsets" label="table:skillsets"></span></p>
+<table>
+<caption>Skillsets Acquired</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Name</strong></th>
+<th style="text-align: center;"><strong>Subtribe</strong></th>
+<th style="text-align: left;"><strong>Skillsets Acquired</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Navneet Raj</td>
+<td style="text-align: center;">Documentation</td>
+<td style="text-align: left;">Overleaf, LaTeX, GitHub Actions,
+Pandoc</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sanjay Pooniya</td>
+<td style="text-align: center;">Documentation</td>
+<td style="text-align: left;">Latex</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ayush Gupta</td>
+<td style="text-align: center;">Documentation</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Asmit Singh</td>
+<td style="text-align: center;">Documentation</td>
+<td style="text-align: left;">Documentation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Harsh Agarwal</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Abhinav Verma</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Khushika Shringi</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Yash Goel</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Aryan Gupta</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Aniket Singh</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Data transfer with minimum internet
+usage</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2021ee10653</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Mridul Ahi</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Eepsita</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Pooja Mahajan</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Chetan Chaurasia</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Vikas Meena</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Anshul</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ark Verma</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">RF communication, GPS modules, Telemetry,
+Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Yash Agarwal</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sheetal Manatawal</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Disha Katia</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Chirag Gautam</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Shubham Aggarwal</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research, Problem Solving</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Mohit Raj</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ujjwal Yadav</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">7 Segment Display</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Aniket Abhiraj</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">LCD design, Arduino, Trigger identifier
+for bus, Hardware design.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sarthak Kumar Singh</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research on occupancy estimation</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Aditi Shekhar</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Anchal</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research, Browsing, Brainstorming</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Rohan Das</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Rohan Das</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Harsh Swaika</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Aditya Jain</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Harshit Sachdeva</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Kinjal Anchhara</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dhruv Kushwaha</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research, Survey</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Shubh Chhabra</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Rishabh Barola</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">RF communication, System design</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Pramukh Jain</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Hardware selection</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Oshin Kavdia</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Kalu Ram Tard</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Joel Arun Kumar Yenubotula</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">ESP32, Networks</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ameya Mishra</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Tanmai Merugu</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Khushvind Maurya</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Vinay Sah</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Vasu Sharma</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">LaTeX, GitHub, Obsidian/Mermaid,
+MSWord</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Shivam Kumar</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Deepanshu Kumar</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Durgesh Nandini</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research on LoRa wireless
+comminication</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Kaustubh Dev</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research, Transmission techniques,
+Receiver hardware</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Arnav Goel</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ayush Kumar</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Bingi Sai Vishal</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Analysis and Design of Algorithms,
+python</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Abhilasa Das</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ravi Parihar</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Himanshu Prajapati</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">GitHub, Research on YT</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Aryan Mishra</td>
+<td style="text-align: center;">Research</td>
+<td style="text-align: left;">Research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="competency-matrix">Competency Matrix</h3>
+<div class="center">
+<p><span id="table:index_for_competency"
+label="table:index_for_competency"></span></p>
+<table>
+<caption>Index for Competency Matrix</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Color</th>
+<th style="text-align: center;">Competency Level</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Proficient</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Skilled</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Familiar</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Not Familiar but Interested to
+Learn</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Not Interested</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="center">
+<p><span id="table:competency" label="table:competency"></span></p>
+<table>
+<caption>Competency Matrix for Documentation Team</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Python</th>
+<th style="text-align: center;">LaTeX</th>
+<th style="text-align: center;">Excel</th>
+<th style="text-align: center;">GitHub</th>
+<th style="text-align: center;">Pandoc</th>
+<th style="text-align: left;">Project Libre</th>
+<th style="text-align: center;">Obsidian</th>
+<th style="text-align: center;">Zotero</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Saket Kandoi</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dintyala Rahul Bhardwaj</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Archisman Biswas</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sanjay Pooniya</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Nikhil Choudhary</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Navneet Raj</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Aryan Mishra</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Purushottam Malviya</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Musaib Gani Pirzada</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Vaibhav Seth</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sanskriti Gautam</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Asmit Singh</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="center">
+<p><span id="table:competency_apd"
+label="table:competency_apd"></span></p>
+<table>
+<caption>Competency Matrix for APD Team</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Arduino</th>
+<th style="text-align: left;">C</th>
+<th style="text-align: center;">Doxygen</th>
+<th style="text-align: center;">Wokwi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Shubham Aggarwal</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Mridul Ahi</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Abhinav Verma</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Aryan Gupta</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Khushika Shringi</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Vasu Sharma</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ark Verma</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Oshin Kavdia</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sarthak Kumar Singh</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Harsh Agarwal</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Aditya Jain</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Anchal</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ameya Mishra</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Aniket Abhiraj</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Aniket Singh</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Anshul</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Arnav Goel</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dhruv Kushwaha</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Harsh Swaika</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Harshit Sachdeva</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Harshit Singh</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Kaustubh Dev</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Khushvind Maurya</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Kinjal Anchhara</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Maithili Joshi</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Mohit Raj Modi</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Mridul Ahi</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Namay Bedi Verma</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Rohan Das</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sai Raj Kolisetti</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Shubh Chhabra</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ujjwal Yadav</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Vishal Sai Bingi</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Yash Goel</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="how-assignment-was-done">How Assignment was done</h3>
+<p>The first step in conducting this assignment efficiently was
+formation of <strong>sub-tribes</strong>. Each sub-tribe had
+<strong>20-25 members</strong>. Each of the sub-tribes <strong>worked
+independently</strong> of each other to come up with ideas to solve the
+problem. After a <strong>thorough review</strong> of all the ideas, one
+final idea was selected. Approaching the idea formulation by formation
+of sub-tribes allowed us to come up with <strong>multiple
+ideas</strong>. Each sub-tribe had <strong>creative freedom</strong> to
+brainstorm over their ideas. Sub-tribes met regularly over the weekend
+and within each sub-tribe there was further division of work. This
+approach resulted in the Tribe being very efficient and creative in its
+ideas.<br />
+Once the idea was finalised, we floated a form to understand the
+skillsets of the whole team. Based on the responses, the tribe was split
+into sub-teams to perform specific tasks to ensure the efficient
+utilization of each team member’s skills and expertise.
+<strong>Matching</strong> the skills of team members with the demands of
+each task was a strategic approach that aimed to leverage their
+<strong>unique</strong> strengths. This thoughtful allocation of
+responsibilities not only optimized the utilization of individual skills
+but also fostered a <strong>collaborative</strong> environment where
+team members could complement each other’s abilities.<br />
+The overall result was a well-coordinated and efficient team, and all
+participating members were <strong>proportionally rewarded with
+IF</strong>. The thorough assignment of tasks according to skill-sets
+not only enhanced the quality of the work but also facilitated a
+smoother workflow, ultimately leading to the successful completion of
+each task within the <strong>stipulated timelines</strong>.<br />
+We used <strong>OverLeaf</strong> and <strong>GitHub</strong> to
+organise the project. The <strong>.pdf</strong> files were efficiently
+generated on <strong>OverLeaf</strong> after any changes were made to
+the files. We used <strong>GitHub</strong> to maintain the versions of
+the project.</p>
+<h3 id="surplus-manpower">Surplus Manpower</h3>
+<p>We <strong>did not</strong> need any surplus man power.</p>
+<h1 id="design">Design</h1>
+<h2 id="process-summary">Process Summary</h2>
+<p>This is the overall view of the finalized design:</p>
+<ul>
+<li><p><strong>Initialization:</strong> At the outset, when the bus
+departs from the depot, the ETA for each bus stop (A and B) will be
+indicated as 0. Only when the bus arrives at stop A and departs for the
+first time do bus stop devices generate and exhibit ETAs.</p></li>
+<li><p><strong>Stop A is in contact with Stop B:</strong> Whenever the
+bus departs from stop A, ETA is updated at bus stop B; conversely, when
+the bus returns from stop B to stop A, ETA is also updated at stop A.
+When a bus stops within a scalable range of any of the bus stops (bus
+stop units within the scalable range can observe the bus unit), but not
+in the designated bus stop area, the nearest bus stop unit determines
+the bus stop’s halt time (since the bus unit transmits a signal to the
+nearest bus stop units). The bus stop unit responsible for detecting the
+bus’s halt promptly notifies the adjacent bus stops, resulting in the
+freezing of their timers as well, upon detection of the bus’s halt. At
+this particular stopover, the bus may be withdrawn from service.In the
+event that BUS unit B is not operational, the signal is transmitted to
+the closest bus stop (where the initial detection of the halt occurred;
+this signal is subsequently transmitted to the adjacent bus stop, and so
+forth).</p></li>
+<li><p><strong>Halt outside range:</strong> In the event that a bus
+comes to a complete stop in an area beyond the scanning range of any bus
+stop unit, the timers within the bus stop commence a countdown process
+until a predetermined threshold is met (or when the bus’s expected top
+arrives within the scannable range of the bus stop).The timers will
+remain in the frozen state until bus unit B is detected and passes
+within the scannable range of the bus stop, which is the location where
+the bus is en route to next.When a passenger is detected by a PIR sensor
+at a bus stop and the bus is within a visible range of the stop, a
+notification signal is transmitted to the bus unit that the
+passengers are awaiting.</p></li>
+</ul>
+<h2 id="network">Network</h2>
+<h3 id="esp-now-protocol">ESP NOW Protocol</h3>
+<p>ESP-NOW is a wireless communication protocol based on the data-link
+layer, which reduces the five layers of the <span
+data-acronym-label="OSI model" data-acronym-form="singular+short">OSI
+model</span> to only one. This way, the data need not be transmitted
+through the network layer, the transport layer, the session layer, the
+presentation layer, and the application layer. Also, there is no need
+for packet headers or unpackers on each layer, which leads to a quick
+response reducing the delay caused by packet loss in congested
+networks.<span><span style="color: white"><span data-acronym-label="OSI"
+data-acronym-form="singular+short">OSI</span></span></span></p>
+<figure id="fig:enter-label">
+<img src="Files/Images/model-en.png" />
+<figcaption>Comparison of the OSI standard layers and the ESP NOW
+protocol layers</figcaption>
+</figure>
+<p>Here are the key features of the ESP NOW Protocol:</p>
+<ul>
+<li><p>It has a fast and user-friendly pairing method that is suitable
+for connecting “one-to-many” and “many-to-many” devices, while also
+controlling them</p></li>
+<li><p>Occupies fewer CPU and flash resources<span><span
+style="color: white"><span data-acronym-label="ECDH"
+data-acronym-form="singular+short">ECDH</span></span></span></p></li>
+<li><p>Can be used as an independent protocol that helps with device
+provisioning, debugging, and firmware upgrades<span><span
+style="color: white"><span data-acronym-label="AES"
+data-acronym-form="singular+short">AES</span></span></span></p></li>
+<li><p><span data-acronym-label="ECDH"
+data-acronym-form="singular+short">ECDH</span> and <span
+data-acronym-label="AES" data-acronym-form="singular+short">AES</span>
+algorithms make data transmission more secure</p></li>
+<li><p>The window synchronization mechanism greatly reduces power
+consumption</p></li>
+</ul>
+<p>The devices communicates directly via the use of the data link and
+pairing do not require the Wi-Fi connection. Pairing can be done by
+initiating and multiple pairing can be done like one initiator can pair
+with multiple responder. Using the RSSI, during the paring the device
+distance can be found and that distance can be authorised and the device
+at that distance can be paired. The protocol supports long distance
+communication which will be helpful in using it outdoors. The portocol
+is compatible with many sensors implying its wide usability to interact
+among the units or the user and the unit. ESP NOW can also take data
+logs from multiple responders for analysis. This will facilitate the
+user to gather the data from the units without needing to go to the
+unit, again, the units can communicate the same among themselves to
+correctly estimate the time or find any abnormality in real time.</p>
+<h3 id="esp-wifi-mesh">ESP-WIFI-MESH</h3>
+<p>ESP-WIFI-MESH is a networking protocol that operates on top of the
+Wi-Fi protocol. It facilitates the interconnection of numerous devices,
+referred to as nodes, across a wide physical area, including both indoor
+and outdoor spaces, within a single WLAN (Wireless Local-Area
+Network).It is self-organizing and self-healing meaning the network can
+be built and maintained autonomously.</p>
+<figure id="fig:enter-label">
+<p><img src="Files/Images/traditional-network.png" alt="image" /> <img
+src="Files/Images/esp-wifi-mesh.png" alt="image" /></p>
+<figcaption>Traditional Wi-Fi Network vs ESP-WIFI-MESH
+Network</figcaption>
+</figure>
+<p>Here are the key features of the ESP-WIFI-MESH:</p>
+<ul>
+<li><p>ESP-WIFI-MESH networks do not rely on a central node like
+traditional infrastructure Wi-Fi networks. Instead, nodes connect with
+neighboring nodes, allowing for greater coverage area.</p></li>
+<li><p>Nodes within this network relay each other’s transmissions,
+enabling interconnectivity without the need to be within range of a
+central node.</p></li>
+<li><p>Unlike traditional Wi-Fi networks, ESP-WIFI-MESH is not as
+susceptible to overloading since the number of nodes permitted on the
+network is not limited by a single central node’s capacity.</p></li>
+</ul>
+<h3 id="rssi">RSSI</h3>
+<p>RSSI stands for Received Signal Strength Indicator. It measures how
+well your device can hear a signal from an access point or router. It’s
+useful for determining if you have enough signal to get a good wireless
+connection. Due to the authentication provided by the channel and the
+incidence of waves from paths of different length, the received signal
+power is not the same as the transmitted power and RSSI is a measured
+from the client (receiver).<span><span style="color: white"><span
+data-acronym-label="RSSI"
+data-acronym-form="singular+short">RSSI</span></span></span><span><span
+style="color: white"><span data-acronym-label="IEEE"
+data-acronym-form="singular+short">IEEE</span></span></span><br />
+RSSI is a term used to measure the relative quality of a received signal
+to a client device, but has no absolute value. The IEEE 802.11 standard
+(a big book of documentation for manufacturing Wi-Fi equipment)
+specifies that RSSI can be on a scale of 0 to up to 255 and that each
+chipset manufacturer can define their own “RSSI_Max” value.<br />
+</p>
+<h2 id="backend">Backend</h2>
+<div class="center">
+<p><img src="Files/Images/Img1.jpeg" alt="image" /></p>
+</div>
+<p>We define the following notations : <span
+class="math display">$$\begin{aligned}
+    T_{AB} &amp;:= A\to B \text{ along path $1$} \\
+    T_{BA} &amp;:= B\to A \text{ along path $2$}
+\end{aligned}$$</span> If the bus stops within the <span
+class="smallcaps">BusStopRegion-A</span>, we update the timer of <span
+class="math inline"><em>A</em></span> to <span
+class="math inline">0</span> and update the timer of <span
+class="math inline"><em>B</em></span> to <span
+class="math inline"><em>T</em><sub><em>A</em><em>B</em></sub></span>
+when the bus moves again. If the bus stops within the range of <span
+class="math inline"><em>A</em></span> but outside the bus stop region,
+we paus the timer for both <span class="math inline"><em>A</em></span>
+and <span class="math inline"><em>B</em></span> and resume it when the
+bus moves again.</p>
+<p><strong>Proof</strong></p>
+<div class="center">
+<p><img src="Files/Images/Img2.jpeg" alt="image" /></p>
+</div>
+<p>We assume that the bus has a fixed acceleration/deceleration profile
+whenever bus moves and bus moves at <span
+class="math inline"><em>v</em><sub>max</sub></span> from <span
+class="math inline"><em>t</em><sub>0</sub></span> (when bus doesn’t stop
+in between).</p>
+<div class="center">
+<p><img src="Files/Images/Img3.jpeg" alt="image" /></p>
+</div>
+<p>Note that : <span class="math display">$$\begin{gathered}
+    T_{AB}= t_{a}+t_0 + t_d \\
+    T_{AB}' = 2t_{a}+2t_d + t_1+t_2 + T_{\operatorname{stop}} \tag{1}
+\end{gathered}$$</span></p>
+<p>Since the distance covered is the same, the area under the curves
+should also be the same. Writing out the expressions for the areas, we
+get : <span class="math display">$$\frac12 v_{\max}\cdot T_{AB} =
+\frac12 v_{\max} (t_a + t_1 + t_d) + \frac12 v_{\max}
+(t_a+t_2+t_d).$$</span> Hence, it follows that : <span
+class="math display"><em>T</em><sub><em>A</em><em>B</em></sub> = 2<em>t</em><sub><em>a</em></sub> + 2<em>t</em><sub><em>d</em></sub> + <em>t</em><sub>1</sub> + <em>t</em><sub>2</sub></span>
+Combining <span class="math inline">(1)</span> and <span
+class="math inline">(2)</span>, we get : <span
+class="math display"><em>T</em><sub><em>A</em><em>B</em></sub>′ = <em>T</em><sub><em>A</em><em>B</em></sub> + <em>t</em><em>T</em><sub>stop</sub></span>
+Hence, pausing the timer as soon as the bus is halted, does the job.</p>
+<h2 id="components-used">Components Used</h2>
+<h3 id="accelerometer">Accelerometer</h3>
+<p>The MPU-6050 is a popular integrated circuit that combines a 3-axis
+gyroscope and a 3-axis accelerometer into a single chip. It’s commonly
+used in various applications, particularly in motion sensing,
+orientation tracking, and gesture recognition systems. For precision
+tracking of both fast and slow motions, the MPU-60X0 features a
+user-programmable gyroscope full-scale range of ±250, ±500, ±1000, and
+±2000°/sec (dps). The parts also have a user-programmable accelerometer
+full-scale range of ±2g, ±4g, ±8g, and ±16g. The typical operating
+voltage range is 2.375V to 3.46V with operating current 100µA.</p>
+<figure id="fig:enter-label">
+<img src="Files/Images/Accelerometer.jpg" />
+<figcaption>MPU 6050 Details</figcaption>
+</figure>
+<h3 id="max7219max7221">MAX7219/MAX7221</h3>
+<h4 class="unnumbered" id="description">Description</h4>
+<p>The MAX7219/MAX7221 are small display drivers with serial
+input/output capability. They connect microprocessors (<span
+class="math inline"><em>μ</em></span>Ps) to 7-segment numeric LED
+displays with a maximum of 8 digits, bar-graph displays, or 64 separate
+displays.</p>
+<p>Light-emitting diodes. The integrated circuit contains a BCD code-B
+decoder, multiplex scan circuitry, segment and digit drivers, and an 8x8
+static RAM that saves each digit. A single external resistor is
+sufficient to establish the segment current for all LEDs. The MAX7221 is
+compatible with <span data-acronym-label="SPI"
+data-acronym-form="singular+short">SPI</span>™, <span
+data-acronym-label="QSPI"
+data-acronym-form="singular+short">QSPI</span>™, and <span
+data-acronym-label="MICROWIRE"
+data-acronym-form="singular+short">MICROWIRE</span>™ communication
+protocols. It is equipped with segment drivers that have low slew rates
+to minimize electromagnetic interference (EMI). The device features a
+practical 4-wire serial interface that can be easily connected to any
+standard microprocessors. Each individual digit can be targeted and
+modified without having to rewrite the entire display. The
+MAX7219/MAX7221 additionally provide the user with the option to choose
+between code-B decoding or no-decode for each digit. The devices are
+equipped with a low-power shutdown mode that consumes only <span
+class="math inline">150 <em>μ</em><em>A</em></span>, as well as analog
+and digital brightness control. They also have a scan-limit register,
+which enables the user to display anywhere from 1 to 8 digits.
+Additionally, there is a test mode available that activates all LEDs
+simultaneously.<span><span style="color: white"><span
+data-acronym-label="SPI"
+data-acronym-form="singular+short">SPI</span></span></span><span><span
+style="color: white"><span data-acronym-label="QSPI"
+data-acronym-form="singular+short">QSPI</span></span></span></p>
+<h4 class="unnumbered" id="features">Features</h4>
+<ul>
+<li><p><span
+class="math inline">10 <em>M</em><em>H</em><em>z</em></span> Serial
+Interface</p></li>
+<li><p>Individual LED Segment Control</p></li>
+<li><p>Decode/No-Decode Digit Selection</p></li>
+<li><p><span class="math inline">150 <em>μ</em><em>A</em></span>
+Low-Power Shutdown (Data Retained)</p></li>
+<li><p>Digital and Analog Brightness Control</p></li>
+<li><p>Display Blanked on Power-Up</p></li>
+<li><p>Drive Common-Cathode LED Display</p></li>
+<li><p>Slew-Rate Limited Segment Drivers for Lower EMI
+(MAX7221)</p></li>
+<li><p>SPI, QSPI, MICROWIRE Serial Interface (MAX7221)</p></li>
+<li><p>24-Pin DIP and SO Packages</p></li>
+</ul>
+<figure id="Max7219">
+<img src="Files/Images/Max7219.png" style="width:70.0%" />
+<figcaption>Typical Application of
+<strong>MAX7219/MAX7221</strong></figcaption>
+</figure>
+<figure>
+
+<figcaption>FSM diagram for the display</figcaption>
+</figure>
+<h1 class="unnumbered" id="references">References</h1>
+<div id="QS">
+
+</div>
+<h1 class="unnumbered" id="appendices">Appendices</h1>
+<h2 class="unnumbered" id="a.-document-statistics">A. Document
+Statistics</h2>
+<ol>
+<li><p><span> <strong>Pages:</strong> </span></p></li>
+<li><p><span> <strong>Words:</strong> 5348 </span></p></li>
+<li><p><span> <strong>Characters:</strong> 29800 </span></p></li>
+<li><p><span> <strong>Characters (with spaces):</strong> 34319
+</span></p></li>
+<li><p><span> <strong>Inline math:</strong> 75 </span></p></li>
+</ol>
+<h2 class="unnumbered" id="b.-readability-index">B. Readability
+Index</h2>
+<ol>
+<li><p><span> <strong>webfx:</strong> 63.4<a href="#fn4"
+class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
+</span></p></li>
+<li><p><span> <strong>Flesh-Kincaid Grade Level:</strong> 6.3<a
+href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a> </span></p></li>
+<li><p><span> <strong>Coleman Liau Index:</strong> 6.6<a href="#fn6"
+class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>
+</span></p></li>
+<li><p><span> <strong>Flesh-Kincaid Ease Score:</strong> 63.4<a
+href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a> </span></p></li>
+<li><p><span> <strong>Gunning Fog Score:</strong> 7.4<a href="#fn8"
+class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>
+</span></p></li>
+</ol>
+<h2 class="unnumbered" id="c.-document-information">C. Document
+Information</h2>
+<ol>
+<li><p><span> <strong>ID:</strong> <span
+id="Target_DocInfo">P2RS--&lt;10 0-&lt;10 0-v1.1.22 </span><a
+href="#fn9" class="footnote-ref" id="fnref9"
+role="doc-noteref"><sup>9</sup></a> </span></p></li>
+<li><p><span> <strong>Document Type:</strong> Private Release
+</span></p></li>
+<li><p><span> <strong>Document Authorised by:</strong> <strong><a
+href="mailto:mt1210697@maths.iitd.ac.in">Ayush Gupta</a></strong>, <a
+href="mailto:ee1210137@ee.iitd.ac.in"><strong>Aryan
+Mishra</strong></a></span></p></li>
+<li><p><span> <strong>Publication Date:</strong> 2024-05-09
+</span></p></li>
+<li><p><span> <strong>Version Number:</strong> <span
+id="Target_Ver">v1.1.22 </span><a href="#fn10" class="footnote-ref"
+id="fnref10" role="doc-noteref"><sup>10</sup></a> </span></p></li>
+<li><p><span><strong>GitHub Repository Details:</strong> Invite-only
+<strong>GitHub Organisation</strong> <a
+href="https://github.com/ELP305-Cleaning-Machine">here</a>
+</span></p></li>
+<li><p><span><strong>Document Familarity:</strong> All tribe members
+have read and understood the document</span></p></li>
+</ol>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p><strong><em>Activity Coordinator</em></strong> written
+in bold<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Algorithms and Protocols Design<a href="#fnref2"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Hardware and Network Design<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Should be easily understood by <strong>12</strong> to
+<strong>13</strong> year olds.<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Writing style of the document is comprehensible to
+individuals who have completed <strong>seventh</strong> grade.<a
+href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>The Coleman Liau Index is designed to evaluate the U.S.
+grade level necessary to understand text.<a href="#fnref6"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>A value between 60 and 80 should be easy for a 12 to 15
+year old to understand.<a href="#fnref7" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>The document is written in clear, in fairly
+understandable language and at a reading level suitable for
+<strong>eighth</strong> graders.<a href="#fnref8" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Format is [ProjectName]-[Year]-[Month]-[Day]-[Version]<a
+href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>Tracked automatically in the <strong>GitHub</strong>
+Repository. <strong>v0.0.1</strong> was the first release after P2
+release on March 13, 2024. Version number is stepped up, based on
+whether it is a <strong>Minor Release</strong> or a <strong>Bug
+Fix</strong>. The file after submission at the end of each week is
+considered a <strong>Major Release</strong><a href="#fnref10"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
